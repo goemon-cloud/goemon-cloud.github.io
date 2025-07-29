@@ -10,7 +10,7 @@ links: ["分析環境の起動(docker)", "分析環境の起動(nii_gakunin_rdm_
 # Jupyter NotebookでPersonaryのデータを分析する
 
 Jupyter NotebookでPersonaryのデータを分析する
-Personaryに保存したデータはPersonaryアプリ https://www.assemblogue.com/apps/PLR2.html から確認することができます。しかしながら、データが数個であれば良いものの、GUIアプリケーションでは多くのデータを扱うことは難しいでしょう。
+Personaryに保存したデータはPersonaryアプリ <https://www.assemblogue.com/apps/PLR2.html> から確認することができます。しかしながら、データが数個であれば良いものの、GUIアプリケーションでは多くのデータを扱うことは難しいでしょう。
 そのため、Pythonスクリプトから操作可能なPersonaryデータの分析環境を試験的に提供しています。
 
 操作方法は以下を参考にしてください。

@@ -14,7 +14,7 @@ links: ["jspsych", "タスクのコピー", "jspsych_survey_plugin関連ファ�
 
 # jsPsych Survey Pluginを使う準備
 GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれかの**方法でjsPsych Survey Plugin関連ファイルを準備する必要があります。
-- https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn を[タスクのコピー](タスクのコピー.md)により複製する
+- <https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn> を[タスクのコピー](タスクのコピー.md)により複製する
 または、
 - [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.md)を参考に新規タスクを作成し、関連ファイルをアップロードする
 
@@ -26,7 +26,7 @@ GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれか�
 ![](images/634e172d3dcdc8001d3f3ee0.png)
 
 # コードの記述
-タスクとして実行する [JavaScript](JavaScript.md) コードを記述します。ここでは、Survey Plugin https://www.jspsych.org/7.3/plugins/survey/ のデモ *Single and multiple item Likert-style scales* 相当のコードを記述します。(jsPsychによるデモ: https://www.jspsych.org/7.3/demos/jspsych-survey-demo3.html )
+タスクとして実行する [JavaScript](JavaScript.md) コードを記述します。ここでは、Survey Plugin <https://www.jspsych.org/7.3/plugins/survey/> のデモ *Single and multiple item Likert-style scales* 相当のコードを記述します。(jsPsychによるデモ: <https://www.jspsych.org/7.3/demos/jspsych-survey-demo3.html> )
 
 以下は  *Single and multiple item Likert-style scales* の例に対してGO-E-MON用の初期化処理を追加したものです。変更点には **// goemon:** というコメントを記載しています。
 

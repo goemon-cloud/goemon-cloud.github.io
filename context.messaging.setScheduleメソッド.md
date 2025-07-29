@@ -14,7 +14,7 @@ context.messaging.setScheduleメソッド
 
 ## optionsパラメータ
 スケジュールの設定を定義します。
-- schedule: cronexpression(ex: '0 7-21 * * *') ... 自動送信間隔。Cron Expression https://en.wikipedia.org/wiki/Cron が指定可能です。
+- schedule: cronexpression(ex: '0 7-21 * * *') ... 自動送信間隔。Cron Expression <https://en.wikipedia.org/wiki/Cron> が指定可能です。
 - messageToPDS: true|false ... やり取りされたメッセージをPersonaryに保存する場合はtrue
 - script: スクリプトの実行をスケジュールしたい場合、JavaScriptで記述したスクリプトを設定します。message, url, scriptのいずれかを設定する必要があります。詳細は [context.messaging.setScheduleメソッド.options.scriptパラメータ](context.messaging.setScheduleメソッド.options.scriptパラメータ.md) を参照してください。
 - message: 固定メッセージをスケジュールしたい場合、メッセージの内容を定義します。message, url, scriptのいずれかを設定する必要があります。詳細は [context.messaging.setScheduleメソッド.options.messageパラメータ](context.messaging.setScheduleメソッド.options.messageパラメータ.md) を参照してください。

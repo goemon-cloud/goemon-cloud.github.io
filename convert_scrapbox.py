@@ -247,6 +247,28 @@ def parse_scrapbox_line(text, max_heading_level=3, page_titles=None, output_dir=
     # Match [text] but not [text](url) - use negative lookahead
     text = re.sub(r'\[([^\]]+)\](?!\()', replace_internal_link, text)
     
+    # Convert plain text URLs to markdown links
+    # Match URLs that are not already in markdown link format or brackets
+    def replace_plain_url(match):
+        url = match.group(0)
+        # Check if URL is already part of markdown link or bracketed
+        full_text = match.string
+        start = match.start()
+        
+        # Check if preceded by [ or (
+        if start > 0 and full_text[start-1] in '[(':
+            return url
+        
+        # Check if followed by ] or )
+        end = match.end()
+        if end < len(full_text) and full_text[end] in '])':
+            return url
+            
+        return f'<{url}>'
+    
+    # Match http:// or https:// URLs
+    text = re.sub(r'https?://[^\s\[\]()<>]+', replace_plain_url, text)
+    
     # Apply indent prefix if any
     if indent_prefix:
         return indent_prefix + text

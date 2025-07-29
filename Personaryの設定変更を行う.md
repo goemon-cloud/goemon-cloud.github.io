@@ -10,7 +10,7 @@ links: ["旧personaryから新personaryへの移行"]
 # Personaryの設定変更を行う
 
 Personaryの設定変更を行う
-Personaryのフレンド登録を再度行いたい場合などは、https://goemon.cloud のPersonary同期設定を開いてください。
+Personaryのフレンド登録を再度行いたい場合などは、<https://goemon.cloud> のPersonary同期設定を開いてください。
 ![](images/60df967beb7414001c0a1c83.png)
 
 

@@ -10,15 +10,15 @@ links: ["jspsych", "チュートリアル1:_簡単なアンケート", "files", 
 # チュートリアル2: jsPsychを使ったタスク
 
 チュートリアル2: jsPsychを使ったタスク
-JavaScriptでタスクを記述する場合、 [jsPsych](jsPsych.md) のようなライブラリを用いることで、既存のコードを再利用できるなどの恩恵を受けることができます。そこで、jsPsychのTutorials > Demo Experiment: Simple Reaction Time Task https://www.jspsych.org/v8/tutorials/rt-task/ をGO-E-MONで実施するチュートリアルを紹介します。
+JavaScriptでタスクを記述する場合、 [jsPsych](jsPsych.md) のようなライブラリを用いることで、既存のコードを再利用できるなどの恩恵を受けることができます。そこで、jsPsychのTutorials > Demo Experiment: Simple Reaction Time Task <https://www.jspsych.org/v8/tutorials/rt-task/> をGO-E-MONで実施するチュートリアルを紹介します。
 基本的な流れは [チュートリアル1: 簡単なアンケート](チュートリアル1_簡単なアンケート.md) と同様です。
 
 # 作成例
 実際の動作を確認するためのサンプルです。
-https://goemon.cloud/t/tYWpN8qBOR75is4PRWSg
+<https://goemon.cloud/t/tYWpN8qBOR75is4PRWSg>
 
 # タスクの作成
-GO-E-MONダッシュボード https://goemon.cloud にアクセスし、*タスクを作る*をクリックし、*新規タスクの追加* ボタンをクリックします。
+GO-E-MONダッシュボード <https://goemon.cloud> にアクセスし、*タスクを作る*をクリックし、*新規タスクの追加* ボタンをクリックします。
 ![](images/634dfcb739203500207b9077.png)
 
 
@@ -29,9 +29,9 @@ newTitleというタスクが作成されますので、タスク名を変更し
 ![](images/60ea243109e998001cb82b65.png)
 
 # ライブラリの追加
-ここから、 https://www.jspsych.org/v8/tutorials/rt-task/ にしたがってコードを記述していくのですが、jsPsychを使用するには、*Part 1: Creating a blank experiment* に記載されているように、jsPsychとして配布されているコードをロードするようにGO-E-MONに指示する必要があります。これは以下の手順で実施します。
-- jsPsychのパッケージ(Dist archive)をダウンロードする https://github.com/jspsych/jsPsych/releases
-  - https://github.com/jspsych/jsPsych/releases/tag/jspsych%408.2.1 のDist archiveを例に解説します。
+ここから、 <https://www.jspsych.org/v8/tutorials/rt-task/> にしたがってコードを記述していくのですが、jsPsychを使用するには、*Part 1: Creating a blank experiment* に記載されているように、jsPsychとして配布されているコードをロードするようにGO-E-MONに指示する必要があります。これは以下の手順で実施します。
+- jsPsychのパッケージ(Dist archive)をダウンロードする <https://github.com/jspsych/jsPsych/releases>
+  - <https://github.com/jspsych/jsPsych/releases/tag/jspsych%408.2.1> のDist archiveを例に解説します。
 - jsPsychのパッケージに含まれるファイルのうち、必要なものをGO-E-MONのファイル([Files](Files.md))タブにアップロードする
 - アップロードしたファイルの読み込み優先度を変更する
 
@@ -58,7 +58,7 @@ jsPsychで表示する画像や動画、音声もファイル([Files](Files.md))
 
 
 # コードの記述
-タスクとして実行する [JavaScript](JavaScript.md) コードを記述します。ここでは、チュートリアル https://www.jspsych.org/tutorials/rt-task/ の*The final code* 相当のコードを記述します。
+タスクとして実行する [JavaScript](JavaScript.md) コードを記述します。ここでは、チュートリアル <https://www.jspsych.org/tutorials/rt-task/> の*The final code* 相当のコードを記述します。
 
 以下は *The final code* をGO-E-MON用に変更したものです。変更点には **// goemon:** というコメントを記載しています。
 

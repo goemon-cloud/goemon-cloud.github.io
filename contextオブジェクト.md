@@ -26,7 +26,7 @@ cogtask.me固有の機能にアクセスすることができます。
 
 ```
 ## taskURLプロパティ
-このタスクのURLを示す文字列です。 https://goemon.cloud/t/{タスクID} の形式となります。
+このタスクのURLを示す文字列です。 <https://goemon.cloud/t/{タスクID}> の形式となります。
 
 ## paramプロパティ
 タスクの設定を格納したオブジェクトです。以下のように設定名で項目を参照することができます。設定は [設定タブ](設定タブ.md) から行うことができます。
@@ -45,7 +45,7 @@ cogtask.me固有の機能にアクセスすることができます。
 実行中のユーザのEメールアドレスにおけるドメイン名を取得するためのプロパティです。ユーザのEメールアドレスが hogehoge-fugafuga@gmail.com の場合には、gmail.com となります。
 
 ## searchプロパティ
-このタスクを開く際に指定されたURL中のクエリパラメータを取得します。オブジェクトは URLSearchParams https://developer.mozilla.org/ja/docs/Web/API/URLSearchParams の形式で提供されます。
+このタスクを開く際に指定されたURL中のクエリパラメータを取得します。オブジェクトは URLSearchParams <https://developer.mozilla.org/ja/docs/Web/API/URLSearchParams> の形式で提供されます。
 
 ```JavaScript
  // ブラウザで タスクのURL?a=PARAMETER_A&b=PARAMETER_B を開いた場合

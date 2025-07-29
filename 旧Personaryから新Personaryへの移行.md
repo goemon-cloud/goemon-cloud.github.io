@@ -28,7 +28,7 @@ Personaryはパスフレーズを忘れてしまうとアカウントの紐付�
 
 
 # 1. 新しいバージョンのPersonaryをインストールする
-スマートフォン等で https://cogtask.me のPersonary同期設定を開く。
+スマートフォン等で <https://cogtask.me> のPersonary同期設定を開く。
 ![](images/60df967beb7414001c0a1c83.png)
 
 *次へ* ボタンを押し、*手順1. Personaryをインストール・設定してください* ダイアログ内の App StoreまたはPlay Store へのリンクを開く。
@@ -39,7 +39,7 @@ Personaryはパスフレーズを忘れてしまうとアカウントの紐付�
 
 
 # 2. 新しいバージョンのPersonaryにアカウントを設定する
-新しいバージョンのPersonaryを開くと、Googleのログインボタンが表示されるので、https://cogtask.me を使用しているGoogleアカウントでログインする。
+新しいバージョンのPersonaryを開くと、Googleのログインボタンが表示されるので、<https://cogtask.me> を使用しているGoogleアカウントでログインする。
 Googleの権限について確認がなされたのち、パスフレーズを聞かれる。この時、
 **古いバージョンで入力したPersonaryのパスフレーズを覚えている場合**
 → それを入力する。

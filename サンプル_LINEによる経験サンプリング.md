@@ -16,7 +16,7 @@ GO-E-MONはLINE連携機能をサポートするため、LINEを使った経験�
 
 このタスクは、以下の論文で紹介されている Ecological Momentary Assessment (EMA) をGO-E-MON + LINEでやってみるテストです。
 
-Hur J, Kuhn M, Grogans SE, Anderson AS, Islam S, Kim HC, Tillman RM, Fox AS, Smith JF, DeYoung KA, Shackman AJ. Anxiety-Related Frontocortical Activity Is Associated With Dampened Stressor Reactivity in the Real World. https://pubmed.ncbi.nlm.nih.gov/35657777/ Psychol Sci. 2022 Jun;33(6):906-924.
+Hur J, Kuhn M, Grogans SE, Anderson AS, Islam S, Kim HC, Tillman RM, Fox AS, Smith JF, DeYoung KA, Shackman AJ. Anxiety-Related Frontocortical Activity Is Associated With Dampened Stressor Reactivity in the Real World. <https://pubmed.ncbi.nlm.nih.gov/35657777/> Psychol Sci. 2022 Jun;33(6):906-924.
 
 
 # タスクの作成
@@ -320,8 +320,8 @@ Hur J, Kuhn M, Grogans SE, Anderson AS, Islam S, Kim HC, Tillman RM, Fox AS, Smi
 3. LINEアカウントの要求:「requestLINEAccount」関数では、LINEとの連携を行います。連携成功後には、「history」に保存された履歴などを表示します。
 4. スクリプトの設定:LINEへのアンケート回答の取得や保存、及び固定時間にアンケートを送るためのスケジュール設定が行われます。
 
-送信間隔は schedule のパラメータで指定されます。ここでは '0 7-21/3 * * *' と設定しているため、7時から21時までの間、3時間おきに毎時0分にメッセージ処理が実施されます。このパラメータには crontab のフォーマットが使われます(参考: https://crontab.guru/ )。このフォーマットでは 5つのフィールド (分、時、日、月、曜日) を設定でき、それぞれのフィールドは '*' (任意の値)、'-' (範囲)、',' (列挙)、'/' (ステップ) を使って表現することができます。
-また、scriptには定期処理と、メッセージに対する応答を行うスクリプトを文字列で指定することができます。メッセージ応答の場合は、スクリプト呼び出し時のsource変数にメッセージが格納されます。source.messageはLINE Messaging APIのメッセージイベント https://developers.line.biz/ja/reference/messaging-api/#message-event に準拠します。定期処理の場合はsourceがnullとなります。
+送信間隔は schedule のパラメータで指定されます。ここでは '0 7-21/3 * * *' と設定しているため、7時から21時までの間、3時間おきに毎時0分にメッセージ処理が実施されます。このパラメータには crontab のフォーマットが使われます(参考: <https://crontab.guru/> )。このフォーマットでは 5つのフィールド (分、時、日、月、曜日) を設定でき、それぞれのフィールドは '*' (任意の値)、'-' (範囲)、',' (列挙)、'/' (ステップ) を使って表現することができます。
+また、scriptには定期処理と、メッセージに対する応答を行うスクリプトを文字列で指定することができます。メッセージ応答の場合は、スクリプト呼び出し時のsource変数にメッセージが格納されます。source.messageはLINE Messaging APIのメッセージイベント <https://developers.line.biz/ja/reference/messaging-api/#message-event> に準拠します。定期処理の場合はsourceがnullとなります。
 この例では、ユーザーが送信したメッセージ文字列を解析し、その回答によって次の質問を出すようなロジックを記述しています。scriptを生成するscriptを記述しているため、非常に読みづらいですが、この例では以下のようなスクリプトを生成し、定期実行するように指示しています。
 
 ```javascript

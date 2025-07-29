@@ -14,7 +14,7 @@ jsPsych Survey Plugin関連ファイルのアップロード
 
 
 # タスクの作成
-GO-E-MONダッシュボード https://goemon.cloud にアクセスし、*タスクを作る*をクリックし、*新規タスクの追加* ボタンをクリックします。
+GO-E-MONダッシュボード <https://goemon.cloud> にアクセスし、*タスクを作る*をクリックし、*新規タスクの追加* ボタンをクリックします。
 ![](images/634dfcb739203500207b9077.png)
 
 
@@ -26,7 +26,7 @@ newTitleというタスクが作成されますので、タスク名を変更し
 
 # ライブラリの追加(jsPsych配布パッケージ)
 jsPsychを使用するには、jsPsychとして配布されているコードをロードするようにGO-E-MONに指示する必要があります。これは以下の手順で実施します。
-- jsPsychのパッケージ(Dist archive)をダウンロードする https://github.com/jspsych/jsPsych/releases
+- jsPsychのパッケージ(Dist archive)をダウンロードする <https://github.com/jspsych/jsPsych/releases>
 - jsPsychのパッケージに含まれるファイルのうち、必要なものをGO-E-MONのファイル([Files](Files.md))タブにアップロードする
 - アップロードしたファイルの読み込み優先度を変更する
 
@@ -41,7 +41,7 @@ jsPsychでは、jspsych.jsが他の.jsファイルよりも先に読み込まれ
 ![](images/60ea307425c67900213d5b76.png)
 
 # ライブラリの追加(Survey Plugin用CSS)
-Survey Pluginは https://www.jspsych.org/7.3/plugins/survey/#css に記載がある通り追加のStyle Sheetファイルを必要とします。そのため、URL https://unpkg.com/@jspsych/plugin-survey@0.2.1/css/survey.css からcssファイルをダウンロードし、ファイル([Files](Files.md))タブにアップロードします。
+Survey Pluginは <https://www.jspsych.org/7.3/plugins/survey/#css> に記載がある通り追加のStyle Sheetファイルを必要とします。そのため、URL <https://unpkg.com/@jspsych/plugin-survey@0.2.1/css/survey.css> からcssファイルをダウンロードし、ファイル([Files](Files.md))タブにアップロードします。
 
 この解説を一通り実行すると、以下のようなファイルがアップロードされているはずです。
 ![](images/634e0fcce1401e0022496e75.png)

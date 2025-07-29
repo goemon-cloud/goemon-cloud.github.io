@@ -10,7 +10,7 @@ links: ["jquery", "contextオブジェクト"]
 # JavaScript
 
 JavaScript
-タスクがどのようなロジックにしたがって動作するかは、JavaScript https://developer.mozilla.org/ja/docs/Web/JavaScript を用いて定義することができます。
+タスクがどのようなロジックにしたがって動作するかは、JavaScript <https://developer.mozilla.org/ja/docs/Web/JavaScript> を用いて定義することができます。
 JavaScriptで定義されたコードは、タスクの **はじめる** ボタンが押された時に実行されます。このコードでは以下の機能が利用可能です。
 
 - $

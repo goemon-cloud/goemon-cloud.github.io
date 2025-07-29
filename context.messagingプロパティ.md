@@ -25,8 +25,8 @@ GO-E-MONでは、ユーザーとWebブラウザを介してやり取りするほ
 
 ## context.messasging.send(message, callback) メソッド
 context.messaging.requestによって連携されたLINEアカウントに対してメッセージを送信します。
-message引数には LINE Messaging API で紹介されている https://developers.line.biz/ja/docs/messaging-api/overview/#what-you-can-do メッセージを定義することができます。
-例えば、テキストメッセージを送信したい場合は、 https://developers.line.biz/ja/reference/messaging-api/#text-message を参考に以下のような値を設定します。
+message引数には LINE Messaging API で紹介されている <https://developers.line.biz/ja/docs/messaging-api/overview/#what-you-can-do> メッセージを定義することができます。
+例えば、テキストメッセージを送信したい場合は、 <https://developers.line.biz/ja/reference/messaging-api/#text-message> を参考に以下のような値を設定します。
 
 ```javascript
   // テキストメッセージの例

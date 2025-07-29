@@ -10,7 +10,7 @@ views: 14
 
 AWARE Frameworkとの連携
 (テスト中)
-AWARE Framework https://awareframework.com/ は、スマートフォンで動作する、ユーザーのさまざまな情報を収集可能なツールです。スマートフォンで得られる加速度情報やGPS情報、HealthKitにより得られる睡眠動態などの情報を実験のために収集することができます。
+AWARE Framework <https://awareframework.com/> は、スマートフォンで動作する、ユーザーのさまざまな情報を収集可能なツールです。スマートフォンで得られる加速度情報やGPS情報、HealthKitにより得られる睡眠動態などの情報を実験のために収集することができます。
 
 AWARE Frameworkを使用するためには、以下のようなコードを記述します。
 

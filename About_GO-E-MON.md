@@ -10,15 +10,15 @@ links: ["terms_of_use", "privacy_policy"]
 # About GO-E-MON
 
 About GO-E-MON
-GO-E-MON(旧称cogtask.me) https://goemon.cloud は、認知課題などさまざまなタスク(テスト)を配信するためのプラットフォームです。
+GO-E-MON(旧称cogtask.me) <https://goemon.cloud> は、認知課題などさまざまなタスク(テスト)を配信するためのプラットフォームです。
 谷沢 智史・東京大学開研究室 が開発し、**現在試験運用中**です。
-詳細なアーキテクチャ等については https://www.mdpi.com/2504-2289/5/4/76 を参照してください。
+詳細なアーキテクチャ等については <https://www.mdpi.com/2504-2289/5/4/76> を参照してください。
 
 > cogtask.me -> goemon.cloud にドメイン名を変更しました。
 
-GO-E-MON (formerly named cogtask.me) https://goemon.cloud is a platform for delivering a variety of tasks (tests), including cognitive tasks.
+GO-E-MON (formerly named cogtask.me) <https://goemon.cloud> is a platform for delivering a variety of tasks (tests), including cognitive tasks.
 It was developed by Satoshi Yazawa, Hiraki Laboratory in the University of Tokyo, and is **currently in trial version**.
-See https://www.mdpi.com/2504-2289/5/4/76 for detailed architecture and other information.
+See <https://www.mdpi.com/2504-2289/5/4/76> for detailed architecture and other information.
 
 > We changed the domain name to cogtask.me -> goemon.cloud.
 

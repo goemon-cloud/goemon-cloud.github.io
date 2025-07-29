@@ -10,13 +10,13 @@ links: ["お問い合わせ", "タスクのコピー", "チュートリアル2:_
 # GoodBrainアプリで脳波データを取得
 
 GoodBrainアプリで脳波データを取得
-ハコスコ社が提供するGoodBrainアプリ(iOS https://apps.apple.com/jp/app/goodbrain/id1481444268 )の脳波計測機能を利用すると、GO-E-MONでさまざまなタスクを表示しながら、FocusCalm( https://focuscalm.com/ )などのEEGヘッドセットで得たデーを保存、利用することができます。
-jsPsych GoodBrain Plugin https://github.com/goemon-cloud/goemon-goodbrain/tree/main/jspsych を利用すると容易にGoodBrainアプリとの連携を記述することができます。このページでは、jsPsych GoodBrain Pluginの使用方法を説明します。
+ハコスコ社が提供するGoodBrainアプリ(iOS <https://apps.apple.com/jp/app/goodbrain/id1481444268> )の脳波計測機能を利用すると、GO-E-MONでさまざまなタスクを表示しながら、FocusCalm( <https://focuscalm.com/> )などのEEGヘッドセットで得たデーを保存、利用することができます。
+jsPsych GoodBrain Plugin <https://github.com/goemon-cloud/goemon-goodbrain/tree/main/jspsych> を利用すると容易にGoodBrainアプリとの連携を記述することができます。このページでは、jsPsych GoodBrain Pluginの使用方法を説明します。
 
 **ご注意** GoodBrainアプリは標準ではGO-E-MON連携機能は有効化されていません。GoodBrain連携機能を利用したい場合は、[お問い合わせ](お問い合わせ.md)フォームからお問い合わせください。
 
 # サンプルタスク
-このページで解説するサンプルを実装したタスクは https://goemon.cloud/t/zEK4OcDEz6QcV1QATGdy にあります。[タスクのコピー](タスクのコピー.md)をして内容を確認することができます。
+このページで解説するサンプルを実装したタスクは <https://goemon.cloud/t/zEK4OcDEz6QcV1QATGdy> にあります。[タスクのコピー](タスクのコピー.md)をして内容を確認することができます。
 
 # jsPsych GoodBrain Pluginを使う準備
 GO-E-MONでjsPsych GoodBrain Pluginを使うためには、まず、以下を参考にjsPsych Plugin関連ファイルを準備する必要があります。作成したいタスクに応じて、Survey Pluginやhtml-keyboard-response Pluginなどを準備してください。
@@ -26,11 +26,11 @@ GO-E-MONでjsPsych GoodBrain Pluginを使うためには、まず、以下を参
 
 jsPsychのPluginを準備したら、GoodBrain Pluginをインストールします。
 
-1. URL https://github.com/goemon-cloud/goemon-goodbrain/tree/main/jspsych からjspsych-gb.cssファイルとjspsych-gb.jsファイルをダウンロードし、ファイル([Files](Files.md))タブにアップロードする。
-2. URL https://jquery.com/download/ から *Download the compressed, production jQuery X.X.X* をダウンロードし、ファイル([Files](Files.md))タブにアップロードする。この.jsファイルの優先度は 1000 とする。
+1. URL <https://github.com/goemon-cloud/goemon-goodbrain/tree/main/jspsych> からjspsych-gb.cssファイルとjspsych-gb.jsファイルをダウンロードし、ファイル([Files](Files.md))タブにアップロードする。
+2. URL <https://jquery.com/download/> から *Download the compressed, production jQuery X.X.X* をダウンロードし、ファイル([Files](Files.md))タブにアップロードする。この.jsファイルの優先度は 1000 とする。
 
 # コードの記述
-タスクとして実行する [JavaScript](JavaScript.md) コードを記述します。ここでは、StroopタスクをjsPsychで実装した例  https://softdev.ppls.ed.ac.uk/online_experiments/example_code/stroop_functions.html をベースに、Stroopタスク実施中の脳波測定タスクを実装しています。GO-E-MON, GoodBrain固有の変更点には **// goemon:** というコメントを記載しています。
+タスクとして実行する [JavaScript](JavaScript.md) コードを記述します。ここでは、StroopタスクをjsPsychで実装した例  <https://softdev.ppls.ed.ac.uk/online_experiments/example_code/stroop_functions.html> をベースに、Stroopタスク実施中の脳波測定タスクを実装しています。GO-E-MON, GoodBrain固有の変更点には **// goemon:** というコメントを記載しています。
 
 ```javascript
    // goemon: jsPsych関係の関数・オブジェクトをスクリプトで利用できるようにします。
@@ -184,7 +184,7 @@ GoodBrainアプリでの動作を確認する場合は、以下の手順を実�
 
 1. 配備([Deployment](Deployment.md))タブより、タスクの配備を実施する。
 2. GoodBrainのタスク実行URLを取得する。記述したタスクをPCブラウザ上で実行するとデバッグ([Debugger](Debugger.md))タブに`GoodBrain URL: goodbrain://goemon?task=https%3A%2F%2Fgoemon.cloud%2Ft%2FzEK4OcDEz6QcV1QATGdy` のようなURLが表示されますので、これをテキストファイル等に保存しておきます。
-3. タスク実行URLのQRコードを作成する。 https://www.qr-code-generator.com/ のようなサービスを使って、2. のURLをQRコードにします。
+3. タスク実行URLのQRコードを作成する。 <https://www.qr-code-generator.com/> のようなサービスを使って、2. のURLをQRコードにします。
 4. GoodBrainアプリをインストールしたiOSアプリより 3. のQRコードを読み込む。
 
 すると、GoodBrainアプリが起動しますので、画面の指示に従ってEEGヘッドセットを接続、GO-E-MONタスクを実行します。

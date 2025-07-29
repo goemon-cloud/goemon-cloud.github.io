@@ -10,9 +10,9 @@ links: ["分析環境の利用", "personary分析環境"]
 # 分析環境の起動(Docker)
 
 分析環境の起動(Docker)
-分析環境はDocker https://www.docker.com/products/docker-desktop というソフトウェアを利用することで実行することができます。
+分析環境はDocker <https://www.docker.com/products/docker-desktop> というソフトウェアを利用することで実行することができます。
 
-1. Docker Desktop https://www.docker.com/products/docker-desktop をインストールする
+1. Docker Desktop <https://www.docker.com/products/docker-desktop> をインストールする
 2. ターミナルから以下のコマンドを実行する
 
 ```terminal
@@ -20,7 +20,7 @@ links: ["分析環境の利用", "personary分析環境"]
 
 ```
 3. ターミナルに以下のようなURLが出力されるので、ブラウザでこのURLを開く
-http://127.0.0.1:8888/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+<http://127.0.0.1:8888/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX>
 
 上記の手順を実施すると、以下のようなJupyterLabの画面が表示されます。 [分析環境の利用](分析環境の利用.md) を参考に実行してください。
 ![](images/63456d0fd29fca0020464f20.png)
