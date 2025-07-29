@@ -143,14 +143,24 @@ def parse_scrapbox_line(text, max_heading_level=3, page_titles=None, output_dir=
                 page_title = urllib.parse.unquote(page_title_encoded)
                 
                 # Check if page exists
-                if page_titles and page_title in page_titles:
-                    # Generate safe filename
-                    filename = page_title.replace(' ', '_').replace('/', '_')
-                    filename = re.sub(r'[<>:"|?*]', '', filename)
-                    return f'[{link_text}]({filename}.md)'
-                else:
-                    # Page doesn't exist - this will be caught in validation
-                    return match.group(0)
+                if page_titles:
+                    # Try exact match first
+                    if page_title in page_titles:
+                        # Generate safe filename
+                        filename = page_title.replace(' ', '_').replace('/', '_')
+                        filename = re.sub(r'[<>:"|?*]', '', filename)
+                        return f'[{link_text}]({filename}.md)'
+                    # Try with underscores converted to spaces
+                    elif '_' in page_title:
+                        page_title_with_spaces = page_title.replace('_', ' ')
+                        if page_title_with_spaces in page_titles:
+                            # Generate safe filename
+                            filename = page_title_with_spaces.replace(' ', '_').replace('/', '_')
+                            filename = re.sub(r'[<>:"|?*]', '', filename)
+                            return f'[{link_text}]({filename}.md)'
+                
+                # Page doesn't exist - this will be caught in validation
+                return match.group(0)
         
         return match.group(0)
     
@@ -310,24 +320,30 @@ def convert_json_file(json_path, output_dir, dry_run=False, verbose=False):
                         page_title = urllib.parse.unquote(page_title_encoded)
                         
                         # Only check if it's the same project
-                        if link_project == project_name and page_title not in page_titles:
-                            invalid_scrapbox_links.append({
-                                'url': url,
-                                'page_title': page_title,
-                                'in_page': page['title']
-                            })
+                        if link_project == project_name:
+                            # Try exact match first
+                            found = page_title in page_titles
+                            # Try with underscores converted to spaces
+                            if not found and '_' in page_title:
+                                page_title_with_spaces = page_title.replace('_', ' ')
+                                found = page_title_with_spaces in page_titles
+                            
+                            if not found:
+                                invalid_scrapbox_links.append({
+                                    'url': url,
+                                    'page_title': page_title,
+                                    'in_page': page['title']
+                                })
     
-    if (invalid_hashtags or invalid_scrapbox_links) and not dry_run:
-        if invalid_hashtags:
-            print(f"Error: Found hashtags referencing non-existent pages:", file=sys.stderr)
-            for tag in sorted(invalid_hashtags):
-                print(f"  #{tag}", file=sys.stderr)
-        
-        if invalid_scrapbox_links:
-            print(f"Error: Found scrapbox.io links referencing non-existent pages:", file=sys.stderr)
-            for link in invalid_scrapbox_links:
-                print(f"  {link['url']} -> \"{link['page_title']}\" (in {link['in_page']})", file=sys.stderr)
-        
+    if invalid_hashtags:
+        print(f"Warning: Found hashtags referencing non-existent pages:", file=sys.stderr)
+        for tag in sorted(invalid_hashtags):
+            print(f"  #{tag}", file=sys.stderr)
+    
+    if invalid_scrapbox_links:
+        print(f"Error: Found scrapbox.io links referencing non-existent pages:", file=sys.stderr)
+        for link in invalid_scrapbox_links:
+            print(f"  {link['url']} -> \"{link['page_title']}\" (in {link['in_page']})", file=sys.stderr)
         return 1
     
     if verbose:
