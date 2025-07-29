@@ -266,3 +266,8 @@ jsPsychのコードをcogtask.me用で動作させる場合、以下の点を変
 ![](images/60d2814daf6dbd004ac13fe8.png)
 
 
+
+
+---
+
+← 戻る: [タスクの作成](タスクの作成.md) | [チュートリアル2: jsPsychを使ったタスク](チュートリアル2_jsPsychを使ったタスク.md) | [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.md) | [GoodBrainアプリで脳波データを取得](GoodBrainアプリで脳波データを取得.md)

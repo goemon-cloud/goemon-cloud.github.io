@@ -19,3 +19,8 @@ Personaryに保存したデータはPersonaryアプリ <https://www.assemblogue.
 - [分析環境の利用](分析環境の利用.md)
 
 #Personary #Personary分析環境
+
+
+---
+
+← 戻る: [チュートリアル1: 簡単なアンケート](チュートリアル1_簡単なアンケート.md) | [チュートリアル2: jsPsychを使ったタスク](チュートリアル2_jsPsychを使ったタスク.md) | [チュートリアル3: jsPsychによる質問紙作成](チュートリアル3_jsPsychによる質問紙作成.md) | [GoodBrainアプリで脳波データを取得](GoodBrainアプリで脳波データを取得.md) | [チュートリアル3: jsPsychによる質問紙作成 (jsPsych v8)](チュートリアル3_jsPsychによる質問紙作成_(jsPsych_v8).md)

@@ -407,17 +407,92 @@ def convert_json_file(json_path, output_dir, dry_run=False, verbose=False):
     incoming_links = {}
     for page in pages:
         source_title = page['title']
-        if 'linksLc' in page:
-            for link_lc in page['linksLc']:
-                # Find the actual page title (case sensitive) from lowercase link
+        
+        # Extract all links from the page text
+        linked_pages = set()
+        
+        for line in page.get('lines', []):
+            text = line.get('text', '')
+            
+            # Skip jQuery code patterns
+            if '$(' in text and '#' in text:
+                continue
+            
+            # Find [text] style links (but not special patterns)
+            bracket_links = re.findall(r'\[([^\]]+)\](?!\()', text)
+            for link in bracket_links:
+                # Skip special patterns
+                if (not link.startswith('http') and 
+                    not link.startswith('*') and 
+                    not link.startswith('/')):
+                    # Check if this page exists
+                    for target_page in pages:
+                        if target_page['title'] == link:
+                            linked_pages.add(link)
+                            break
+                        # Try with space/underscore conversion
+                        elif target_page['title'].replace(' ', '_') == link:
+                            linked_pages.add(target_page['title'])
+                            break
+                        elif target_page['title'].replace('_', ' ') == link:
+                            linked_pages.add(target_page['title'])
+                            break
+            
+            # Find #hashtag style links
+            hashtags = re.findall(r'#([^\s\[\]]+)', text)
+            for tag in hashtags:
+                # Check if this page exists
                 for target_page in pages:
-                    if target_page['title'].lower() == link_lc:
-                        target_title = target_page['title']
-                        if target_title not in incoming_links:
-                            incoming_links[target_title] = []
-                        if source_title not in incoming_links[target_title]:
-                            incoming_links[target_title].append(source_title)
+                    if target_page['title'] == tag:
+                        linked_pages.add(tag)
                         break
+            
+            # Find [text](page.md) style links
+            md_links = re.findall(r'\[([^\]]+)\]\(([^)]+\.md)\)', text)
+            for link_text, link_path in md_links:
+                if not link_path.startswith('http'):
+                    page_name = link_path[:-3]  # Remove .md
+                    # Check if this page exists
+                    for target_page in pages:
+                        if target_page['title'] == page_name:
+                            linked_pages.add(page_name)
+                            break
+                        # Try with space/underscore conversion
+                        elif target_page['title'].replace(' ', '_') == page_name:
+                            linked_pages.add(target_page['title'])
+                            break
+                        elif target_page['title'].replace('_', ' ') == page_name:
+                            linked_pages.add(target_page['title'])
+                            break
+            
+            # Find scrapbox.io links
+            scrapbox_links = re.findall(r'\[([^\]]+)\]\((https://scrapbox\.io/[^)]+)\)', text)
+            for link_text, url in scrapbox_links:
+                parsed = urllib.parse.urlparse(url)
+                if parsed.netloc == 'scrapbox.io':
+                    path_parts = parsed.path.strip('/').split('/', 1)
+                    if len(path_parts) == 2:
+                        page_title_encoded = path_parts[1]
+                        page_title = urllib.parse.unquote(page_title_encoded)
+                        # Check if this page exists
+                        for target_page in pages:
+                            if target_page['title'] == page_title:
+                                linked_pages.add(page_title)
+                                break
+                            # Try with space/underscore conversion
+                            elif target_page['title'].replace(' ', '_') == page_title:
+                                linked_pages.add(target_page['title'])
+                                break
+                            elif target_page['title'].replace('_', ' ') == page_title:
+                                linked_pages.add(target_page['title'])
+                                break
+        
+        # Add to incoming links map
+        for target_title in linked_pages:
+            if target_title not in incoming_links:
+                incoming_links[target_title] = []
+            if source_title not in incoming_links[target_title]:
+                incoming_links[target_title].append(source_title)
     
     # Find maximum heading level (asterisk count) in the document
     max_heading_level = 1

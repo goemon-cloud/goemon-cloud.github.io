@@ -24,3 +24,8 @@ See <https://www.mdpi.com/2504-2289/5/4/76> for detailed architecture and other 
 
 - 利用規約: [Terms of Use](Terms_of_Use.md) (in Japanese)
 - プライバシーポリシー: [Privacy Policy](Privacy_Policy.md) (in Japanese)
+
+
+---
+
+← [User Manualに戻る](User_Manual.md)
