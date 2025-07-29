@@ -26,3 +26,7 @@ messageパラメータには scheduled, replyの2つのパラメータが指定�
  },
 
 ```
+
+---
+
+← [context.messaging.setScheduleメソッドに戻る](context.messaging.setScheduleメソッド.md)

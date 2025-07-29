@@ -11,3 +11,8 @@ views: 8
 HTML
 以下の記事などを読んでください。
 <https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/HTML_basics>
+
+
+---
+
+← [チュートリアル1: 簡単なアンケートに戻る](チュートリアル1_簡単なアンケート.md)

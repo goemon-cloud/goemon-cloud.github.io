@@ -25,3 +25,7 @@ context.messaging.setScheduleメソッド
 - error ... 連携時にエラーが発生した場合、null以外の値が入ります
 
 [context.messaging.requestメソッド](context.messaging.requestメソッド.md) を事前に実施しておく必要があります。
+
+---
+
+← [context.messagingプロパティに戻る](context.messagingプロパティ.md)

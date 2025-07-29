@@ -17,3 +17,8 @@ JavaScriptで定義されたコードは、タスクの **はじめる** ボタ�
   - [jQuery](jQuery.md) を利用することができます。
 - context
   - cogtask.me固有の機能にアクセスすることができます。プロパティ・メソッドについては [contextオブジェクト](contextオブジェクト.md) を参照してください。
+
+
+---
+
+← 戻る: [Deployment](Deployment.md) | [タスクの作成](タスクの作成.md) | [チュートリアル1: 簡単なアンケート](チュートリアル1_簡単なアンケート.md) | [チュートリアル2: jsPsychを使ったタスク](チュートリアル2_jsPsychを使ったタスク.md) | [チュートリアル3: jsPsychによる質問紙作成](チュートリアル3_jsPsychによる質問紙作成.md) | [GoodBrainアプリで脳波データを取得](GoodBrainアプリで脳波データを取得.md) | [サンプル: LINEによる経験サンプリング](サンプル_LINEによる経験サンプリング.md) | [チュートリアル3: jsPsychによる質問紙作成 (jsPsych v8)](チュートリアル3_jsPsychによる質問紙作成_(jsPsych_v8).md)

@@ -12,3 +12,8 @@ links: ["contextオブジェクト"]
 context.messaging.setScheduleメソッド.options.scriptパラメータ
 定期実行したいスクリプトを定義できます。スクリプト中では [contextオブジェクト](contextオブジェクト.md) を使用することができます。
 また、利用者からのメッセージに対する応答の場合は、sourceオブジェクトとしてメッセージの内容を参照可能です。
+
+
+---
+
+← [context.messaging.setScheduleメソッドに戻る](context.messaging.setScheduleメソッド.md)

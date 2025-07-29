@@ -47,3 +47,8 @@ message引数には LINE Messaging API で紹介されている <https://develop
 ## context.messaging.getLastResult(callback) メソッド
 このユーザーに関して実行された定期実行結果のうち、最後に検出されたエラーと、コンソール出力を取得します。
 callbackに指定したfunctionの第1引数には { error: 最後に検出されたエラーの内容, console: 最後に実行されたコンソール出力 } が、定期実行が未スケジュールの場合はnullが格納されます。第2引数には結果の取得に失敗した場合にエラーオブジェクトが格納されます。
+
+
+---
+
+← [contextオブジェクトに戻る](contextオブジェクト.md)

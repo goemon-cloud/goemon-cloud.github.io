@@ -14,3 +14,8 @@ context.messaging.setScheduleメソッド.options.urlパラメータ
 - POSTメソッドで送信
 - JSONリクエストボディにトリガーとなるメッセージとcontext.userStorage相当の内容が格納される
 
+
+
+---
+
+← [context.messaging.setScheduleメソッドに戻る](context.messaging.setScheduleメソッド.md)

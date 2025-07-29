@@ -15,3 +15,8 @@ Files
 ![](images/60b47041e7f7cd001e678108.png)
 
 [jsPsychのスクリプト読み込み設定](jsPsychのスクリプト読み込み設定.md)
+
+
+---
+
+← 戻る: [タスクの作成](タスクの作成.md) | [contextオブジェクト](contextオブジェクト.md) | [jsPsychのスクリプト読み込み設定](jsPsychのスクリプト読み込み設定.md) | [チュートリアル2: jsPsychを使ったタスク](チュートリアル2_jsPsychを使ったタスク.md) | [タスクを他のユーザが配信できるようにする](タスクを他のユーザが配信できるようにする.md) | [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.md) | [GoodBrainアプリで脳波データを取得](GoodBrainアプリで脳波データを取得.md)

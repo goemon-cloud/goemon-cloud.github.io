@@ -276,7 +276,7 @@ def parse_scrapbox_line(text, max_heading_level=3, page_titles=None, output_dir=
     return text
 
 
-def convert_page(page, max_heading_level=3, page_titles=None, output_dir=None, dry_run=False, verbose=False):
+def convert_page(page, max_heading_level=3, page_titles=None, output_dir=None, dry_run=False, verbose=False, incoming_links=None):
     """Convert page to Markdown format, returns (filename, content)"""
     title = page['title']
     
@@ -328,6 +328,26 @@ def convert_page(page, max_heading_level=3, page_titles=None, output_dir=None, d
     # Close code block if still open
     if in_code_block:
         content_lines.append('```')
+    
+    # Add back links if any
+    if incoming_links and title in incoming_links and incoming_links[title]:
+        content_lines.extend(['', '---', ''])
+        linking_pages = incoming_links[title]
+        
+        if len(linking_pages) == 1:
+            # Single back link
+            page_name = linking_pages[0]
+            safe_filename = page_name.replace(' ', '_').replace('/', '_')
+            safe_filename = re.sub(r'[<>:"|?*]', '', safe_filename)
+            content_lines.append(f'← [{page_name}に戻る]({safe_filename}.md)')
+        else:
+            # Multiple back links
+            links = []
+            for page_name in linking_pages:
+                safe_filename = page_name.replace(' ', '_').replace('/', '_')
+                safe_filename = re.sub(r'[<>:"|?*]', '', safe_filename)
+                links.append(f'[{page_name}]({safe_filename}.md)')
+            content_lines.append(f'← 戻る: {" | ".join(links)}')
     
     return filename, '\n'.join(content_lines)
 
@@ -382,6 +402,22 @@ def convert_json_file(json_path, output_dir, dry_run=False, verbose=False):
     
     # Create set of page titles for hashtag validation
     page_titles = {page['title'] for page in pages}
+    
+    # Build incoming links map (which pages link to each page)
+    incoming_links = {}
+    for page in pages:
+        source_title = page['title']
+        if 'linksLc' in page:
+            for link_lc in page['linksLc']:
+                # Find the actual page title (case sensitive) from lowercase link
+                for target_page in pages:
+                    if target_page['title'].lower() == link_lc:
+                        target_title = target_page['title']
+                        if target_title not in incoming_links:
+                            incoming_links[target_title] = []
+                        if source_title not in incoming_links[target_title]:
+                            incoming_links[target_title].append(source_title)
+                        break
     
     # Find maximum heading level (asterisk count) in the document
     max_heading_level = 1
@@ -500,7 +536,7 @@ def convert_json_file(json_path, output_dir, dry_run=False, verbose=False):
     
     # Convert each page
     for i, page in enumerate(pages):
-        filename, content = convert_page(page, max_heading_level, page_titles, output_dir, dry_run, verbose)
+        filename, content = convert_page(page, max_heading_level, page_titles, output_dir, dry_run, verbose, incoming_links)
         output_path = os.path.join(output_dir, filename)
         
         if dry_run:

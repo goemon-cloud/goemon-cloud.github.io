@@ -31,3 +31,7 @@ links: ["分析環境の利用", "personary分析環境"]
 > この方法で起動した場合はデータはコンテナとして保持されます。停止後は、docker start jupyter-plr でコンテナを再起動できます。
 
 #Personary分析環境
+
+---
+
+← 戻る: [Jupyter NotebookでPersonaryのデータを分析する](Jupyter_NotebookでPersonaryのデータを分析する.md) | [分析環境の起動(NII GakuNin RDM データ解析機能)](分析環境の起動(NII_GakuNin_RDM_データ解析機能).md)

@@ -88,3 +88,8 @@ summary, detailパラメータについては *finish(summary, detail, options)*
 
 ## abort(options)メソッド
 タスクを中断する際に呼び出します。*finish(summary, detail, options)*との違いは、ログ送信を行わずに終了する点です。optionsパラメータによって終了時の動作を定義することができます。optionsパラメータに関する詳細は [終了時のoptionsパラメータ](終了時のoptionsパラメータ.md) を参照してください。
+
+
+---
+
+← 戻る: [JavaScript](JavaScript.md) | [チュートリアル2: jsPsychを使ったタスク](チュートリアル2_jsPsychを使ったタスク.md) | [Param](Param.md) | [context.messaging.setScheduleメソッド.options.scriptパラメータ](context.messaging.setScheduleメソッド.options.scriptパラメータ.md)
