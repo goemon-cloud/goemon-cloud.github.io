@@ -1,0 +1,12 @@
+title: GO-E-MON ユーザーマニュアル
+description: GO-E-MON(GOod Experiment for Mankind Online) ユーザーマニュアル
+theme: just-the-docs
+
+url: https://goemon-cloud.github.io
+baseurl: ""
+
+# Footer content
+footer_content: "Copyright &copy; 2021-2025 GO-E-MON Project."
+
+# Color scheme supports "light" (default) and "dark"
+color_scheme: light

@@ -6,3 +6,16 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+.bundle
+Gemfile.lock
+.ruby-version
+
+# macOS
+.DS_Store
