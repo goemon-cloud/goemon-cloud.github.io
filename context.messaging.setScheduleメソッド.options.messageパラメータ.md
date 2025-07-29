@@ -10,8 +10,8 @@ views: 9
 
 context.messaging.setScheduleメソッド.options.messageパラメータ
 messageパラメータには scheduled, replyの2つのパラメータが指定可能です。
- scheduled ... 定期実行の際に送信するメッセージをJSON文字列により指定します。このJSON文字列には LINE Messaging API で紹介されている https://developers.line.biz/ja/docs/messaging-api/overview/#what-you-can-do メッセージを定義することができます。
- reply ... 利用者からの返信の際に送信するメッセージをJSON文字列により指定します。このJSON文字列には LINE Messaging API で紹介されている https://developers.line.biz/ja/docs/messaging-api/overview/#what-you-can-do メッセージを定義することができます。
+- scheduled ... 定期実行の際に送信するメッセージをJSON文字列により指定します。このJSON文字列には LINE Messaging API で紹介されている https://developers.line.biz/ja/docs/messaging-api/overview/#what-you-can-do メッセージを定義することができます。
+- reply ... 利用者からの返信の際に送信するメッセージをJSON文字列により指定します。このJSON文字列には LINE Messaging API で紹介されている https://developers.line.biz/ja/docs/messaging-api/overview/#what-you-can-do メッセージを定義することができます。
 
 ```javascript
  message: {

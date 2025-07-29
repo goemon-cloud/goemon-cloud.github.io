@@ -13,9 +13,9 @@ context.messaging.requestメソッド
 
 ## optionsパラメータ
 optionsには以下の値が指定できます。
- type: 'line' | 'linegroup' ... 要求するサービスのタイプ。'line' の場合GO-E-MON LINEアカウントとのトークでのやり取り、'linegroup' の場合GO-E-MON LINEアカウントとの**トークグループでの**やり取りを要求します。
+- type: 'line' | 'linegroup' ... 要求するサービスのタイプ。'line' の場合GO-E-MON LINEアカウントとのトークでのやり取り、'linegroup' の場合GO-E-MON LINEアカウントとの[* トークグループでの]やり取りを要求します。
 
 ## callbackパラメータ
 要求成功時・失敗時に呼び出されるfunctionを指定することができます。functionには以下の引数が指定されます。
- result ... 連携がキャンセルされた場合、nullが入ります。連携に成功した場合、null以外の値が入ります
- error ... 連携時にエラーが発生した場合、null以外の値が入ります
+- result ... 連携がキャンセルされた場合、nullが入ります。連携に成功した場合、null以外の値が入ります
+- error ... 連携時にエラーが発生した場合、null以外の値が入ります

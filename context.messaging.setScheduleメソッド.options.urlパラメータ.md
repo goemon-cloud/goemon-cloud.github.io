@@ -11,6 +11,6 @@ views: 8
 context.messaging.setScheduleメソッド.options.urlパラメータ
 定期実行および応答時のメッセージ生成を外部サービスに委託することができます。
 *TBD*
- POSTメソッドで送信
- JSONリクエストボディにトリガーとなるメッセージとcontext.userStorage相当の内容が格納される
+- POSTメソッドで送信
+- JSONリクエストボディにトリガーとなるメッセージとcontext.userStorage相当の内容が格納される
 

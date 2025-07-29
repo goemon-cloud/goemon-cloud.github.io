@@ -65,12 +65,42 @@ def parse_scrapbox_line(text, max_heading_level=3, page_titles=None, output_dir=
     if text.startswith('>'):
         return text
     
-    # Indented list
-    if text.startswith('\t'):
-        # Count tabs and create appropriate indent level
-        indent_level = len(text) - len(text.lstrip('\t'))
-        indent = '  ' * (indent_level - 1)
-        return f'{indent}- {text.lstrip()}'
+    # Handle list items with asterisks (before other indented content)
+    if text.lstrip().startswith('*') and (text.startswith(' ') or text.startswith('*')):
+        # Count leading spaces
+        space_count = len(text) - len(text.lstrip(' '))
+        # Remove spaces and asterisk
+        content = text.lstrip(' ').lstrip('*').lstrip()
+        
+        # Calculate indentation level based on 4-space increments
+        if space_count == 0 and text.startswith('*'):
+            # Top level: no spaces, starts with *
+            return f'- {content}'
+        elif space_count % 4 == 0:
+            # Each 4 spaces = one indent level
+            indent_level = space_count // 4
+            indent = '  ' * indent_level
+            return f'{indent}- {content}'
+        else:
+            # Non-standard spacing, keep as is
+            return text
+    
+    # Other indented content
+    if text.startswith(' '):
+        # Check for space + tab pattern (second level)
+        if len(text) > 1 and text[1] == '\t':
+            # Second level: 1 space + tab
+            return f'  - {text[2:]}'  # Remove space and tab, add two spaces + dash
+        else:
+            # First level: single space (or multiple spaces in code block)
+            # Count leading spaces
+            space_count = len(text) - len(text.lstrip(' '))
+            if space_count == 1:
+                # Single space = first level list
+                return f'- {text[1:]}'
+            else:
+                # Multiple spaces = keep as is (likely code)
+                return text
     
     # Skip hashtag conversion for lines that look like jQuery code
     if '$(' in text and '#' in text:

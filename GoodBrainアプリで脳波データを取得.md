@@ -21,8 +21,8 @@ jsPsych GoodBrain Plugin https://github.com/goemon-cloud/goemon-goodbrain/tree/m
 # jsPsych GoodBrain Pluginを使う準備
 GO-E-MONでjsPsych GoodBrain Pluginを使うためには、まず、以下を参考にjsPsych Plugin関連ファイルを準備する必要があります。作成したいタスクに応じて、Survey Pluginやhtml-keyboard-response Pluginなどを準備してください。
 
- [チュートリアル2: jsPsychを使ったタスク](チュートリアル2_jsPsychを使ったタスク.md) を参考にhtml-keyboard-response Pluginなどを準備する
- [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.md)を参考にSurvey Pluginを準備する
+- [チュートリアル2: jsPsychを使ったタスク] を参考にhtml-keyboard-response Pluginなどを準備する
+- [jsPsych Survey Plugin関連ファイルのアップロード]を参考にSurvey Pluginを準備する
 
 jsPsychのPluginを準備したら、GoodBrain Pluginをインストールします。
 
