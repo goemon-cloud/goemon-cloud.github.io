@@ -11,7 +11,7 @@ links: ["jspsych", "チュートリアル1:_簡単なアンケート", "files", 
 
 チュートリアル2: jsPsychを使ったタスク
 JavaScriptでタスクを記述する場合、 [jsPsych](jsPsych.md) のようなライブラリを用いることで、既存のコードを再利用できるなどの恩恵を受けることができます。そこで、jsPsychのTutorials > Demo Experiment: Simple Reaction Time Task https://www.jspsych.org/v8/tutorials/rt-task/ をGO-E-MONで実施するチュートリアルを紹介します。
-基本的な流れは [チュートリアル1: 簡単なアンケート](チュートリアル1: 簡単なアンケート.md) と同様です。
+基本的な流れは [チュートリアル1: 簡単なアンケート](チュートリアル1_簡単なアンケート.md) と同様です。
 
 # 作成例
 実際の動作を確認するためのサンプルです。
@@ -262,7 +262,7 @@ jsPsychのコードをcogtask.me用で動作させる場合、以下の点を変
 > タスクのJavaScriptや説明文を変更したあとは、必ず配備ボタンを押して他のユーザーにも最新版を参照できるようにする必要があります。
 
 # 実施確認
-タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](Jupyter NotebookでPersonaryのデータを分析する.md)を参照してください。
+タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](Jupyter_NotebookでPersonaryのデータを分析する.md)を参照してください。
 ![](images/60d2814daf6dbd004ac13fe8.png)
 
 

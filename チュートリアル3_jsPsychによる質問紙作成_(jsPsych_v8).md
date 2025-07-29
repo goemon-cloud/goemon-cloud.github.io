@@ -15,9 +15,9 @@ links: ["jspsych", "タスクのコピー", "jspsych_survey_plugin関連ファ�
 
 # jsPsych Survey Pluginを使う準備
 GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれかの**方法でjsPsych Survey Plugin関連ファイルを準備する必要があります。
- [- https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn を[タスクのコピー](- https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn を[タスクのコピー.md)により複製する] こちらはv7です
+ [- https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn を[タスクのコピー](-_https__goemon.cloud_t_aTzSoAnzDyQw1TOwPrPn_を[タスクのコピー.md)により複製する] こちらはv7です
 または、
- [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych Survey Plugin関連ファイルのアップロード.md)を参考に新規タスクを作成し、関連ファイルをアップロードする - v8はsurvey.cssの取得方法が異なる
+ [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.md)を参考に新規タスクを作成し、関連ファイルをアップロードする - v8はsurvey.cssの取得方法が異なる
 
 # タスク名の設定
 タスクの準備をしたら、必要に応じてタスク名を変更します。タスク名右の編集ボタンをクリックします。
@@ -203,5 +203,5 @@ GO-E-MONのエディタが邪魔で*はじめる*ボタンが見えない場合�
 
 
 # 実施確認
-タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](Jupyter NotebookでPersonaryのデータを分析する.md)を参照してください。
+タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](Jupyter_NotebookでPersonaryのデータを分析する.md)を参照してください。
 ![](images/60d2814daf6dbd004ac13fe8.png)

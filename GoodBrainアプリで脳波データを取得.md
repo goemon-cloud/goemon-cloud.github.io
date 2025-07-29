@@ -21,8 +21,8 @@ jsPsych GoodBrain Plugin https://github.com/goemon-cloud/goemon-goodbrain/tree/m
 # jsPsych GoodBrain Pluginを使う準備
 GO-E-MONでjsPsych GoodBrain Pluginを使うためには、まず、以下を参考にjsPsych Plugin関連ファイルを準備する必要があります。作成したいタスクに応じて、Survey Pluginやhtml-keyboard-response Pluginなどを準備してください。
 
- [チュートリアル2: jsPsychを使ったタスク](チュートリアル2: jsPsychを使ったタスク.md) を参考にhtml-keyboard-response Pluginなどを準備する
- [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych Survey Plugin関連ファイルのアップロード.md)を参考にSurvey Pluginを準備する
+ [チュートリアル2: jsPsychを使ったタスク](チュートリアル2_jsPsychを使ったタスク.md) を参考にhtml-keyboard-response Pluginなどを準備する
+ [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.md)を参考にSurvey Pluginを準備する
 
 jsPsychのPluginを準備したら、GoodBrain Pluginをインストールします。
 
@@ -190,7 +190,7 @@ GoodBrainアプリでの動作を確認する場合は、以下の手順を実�
 すると、GoodBrainアプリが起動しますので、画面の指示に従ってEEGヘッドセットを接続、GO-E-MONタスクを実行します。
 
 # データの分析
-タスクを実行すると他のタスクと同様にタスク提供者のPersonaryに実施記録が格納されます。本サンプルでは、実施記録とは別のログとして、脳波の生データも記録されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](Jupyter NotebookでPersonaryのデータを分析する.md)を参照してください。
+タスクを実行すると他のタスクと同様にタスク提供者のPersonaryに実施記録が格納されます。本サンプルでは、実施記録とは別のログとして、脳波の生データも記録されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](Jupyter_NotebookでPersonaryのデータを分析する.md)を参照してください。
 
 ![](images/63b504a5c476da001e81ac4f.PNG)
 

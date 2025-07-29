@@ -15,7 +15,7 @@ Personaryに保存したデータはPersonaryアプリ https://www.assemblogue.c
 
 操作方法は以下を参考にしてください。
  [分析環境の起動(Docker)](分析環境の起動(Docker).md)
- [分析環境の起動(NII GakuNin RDM データ解析機能)](分析環境の起動(NII GakuNin RDM データ解析機能).md)
+ [分析環境の起動(NII GakuNin RDM データ解析機能)](分析環境の起動(NII_GakuNin_RDM_データ解析機能).md)
  [分析環境の利用](分析環境の利用.md)
 
 #Personary #Personary分析環境

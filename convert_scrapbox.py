@@ -167,7 +167,28 @@ def parse_scrapbox_line(text, max_heading_level=3, page_titles=None, output_dir=
     text = re.sub(r'\[([^\]]+)\]\((https://scrapbox\.io/[^)]+)\)', replace_scrapbox_link, text)
     
     # [link] internal link
-    text = re.sub(r'\[([^\]]+)\]', r'[\1](\1.md)', text)
+    def replace_internal_link(match):
+        link_text = match.group(1)
+        if page_titles:
+            # Try exact match first
+            if link_text in page_titles:
+                filename = link_text.replace(' ', '_').replace('/', '_')
+                filename = re.sub(r'[<>:"|?*]', '', filename)
+                return f'[{link_text}]({filename}.md)'
+            # Try with spaces converted to underscores
+            elif ' ' in link_text:
+                link_text_with_underscores = link_text.replace(' ', '_')
+                if link_text_with_underscores in page_titles:
+                    filename = link_text_with_underscores.replace(' ', '_').replace('/', '_')
+                    filename = re.sub(r'[<>:"|?*]', '', filename)
+                    return f'[{link_text}]({filename}.md)'
+        
+        # Default: just convert to .md link
+        filename = link_text.replace(' ', '_').replace('/', '_')
+        filename = re.sub(r'[<>:"|?*]', '', filename)
+        return f'[{link_text}]({filename}.md)'
+    
+    text = re.sub(r'\[([^\]]+)\]', replace_internal_link, text)
     
     return text
 
@@ -289,9 +310,10 @@ def convert_json_file(json_path, output_dir, dry_run=False, verbose=False):
                 asterisk_count = len(match.group(1))
                 max_heading_level = max(max_heading_level, asterisk_count)
     
-    # Check for invalid hashtags and scrapbox.io links
+    # Check for invalid hashtags, scrapbox.io links, and local markdown links
     invalid_hashtags = set()
     invalid_scrapbox_links = []
+    invalid_local_links = []
     
     # Get project name from JSON data
     project_name = data.get('name', '')
@@ -334,6 +356,37 @@ def convert_json_file(json_path, output_dir, dry_run=False, verbose=False):
                                     'page_title': page_title,
                                     'in_page': page['title']
                                 })
+            
+            # Find local markdown links [text](file.md)
+            local_link_matches = re.findall(r'\[([^\]]+)\]\(([^)]+\.md)\)', text)
+            for link_text, link_path in local_link_matches:
+                # Skip if it's a URL
+                if link_path.startswith('http://') or link_path.startswith('https://'):
+                    continue
+                
+                # Extract page name from link path (remove .md extension)
+                if link_path.endswith('.md'):
+                    page_name = link_path[:-3]
+                    
+                    # Try exact match first
+                    found = page_name in page_titles
+                    
+                    # Try with spaces converted to underscores
+                    if not found and ' ' in page_name:
+                        page_name_with_underscores = page_name.replace(' ', '_')
+                        found = page_name_with_underscores in page_titles
+                    
+                    # Try with underscores converted to spaces
+                    if not found and '_' in page_name:
+                        page_name_with_spaces = page_name.replace('_', ' ')
+                        found = page_name_with_spaces in page_titles
+                    
+                    if not found:
+                        invalid_local_links.append({
+                            'link': f'[{link_text}]({link_path})',
+                            'page_name': page_name,
+                            'in_page': page['title']
+                        })
     
     if invalid_hashtags:
         print(f"Warning: Found hashtags referencing non-existent pages:", file=sys.stderr)
@@ -345,6 +398,11 @@ def convert_json_file(json_path, output_dir, dry_run=False, verbose=False):
         for link in invalid_scrapbox_links:
             print(f"  {link['url']} -> \"{link['page_title']}\" (in {link['in_page']})", file=sys.stderr)
         return 1
+    
+    if invalid_local_links:
+        print(f"Warning: Found local markdown links referencing non-existent pages:", file=sys.stderr)
+        for link in invalid_local_links:
+            print(f"  {link['link']} -> \"{link['page_name']}\" (in {link['in_page']})", file=sys.stderr)
     
     if verbose:
         print(f"Converting project: {project_name}")

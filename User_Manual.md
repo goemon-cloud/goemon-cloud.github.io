@@ -19,4 +19,4 @@ GO-E-MON https://goemon.cloud では他のユーザが作成したタスクを�
  [タスクの作成](タスクの作成.md)
  [タスクの例](タスクの例.md)
 
-GO-E-MONについては [About GO-E-MON](About GO-E-MON.md) を参照してください。
+GO-E-MONについては [About GO-E-MON](About_GO-E-MON.md) を参照してください。
