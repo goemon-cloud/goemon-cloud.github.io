@@ -24,7 +24,7 @@ optionsパラメータには以下のキーを指定することができます�
 
 ## next
 タスク終了後のリンク先を指定することができます。値には以下のキーを含めることができます。
-- [* url (必須)]: リンク先のURL。?key1=value1&key2=value2&...
-- [* text]: 終了時のリンクボタンに与える文字列。省略した場合は「OK」とする。forceにtrueが指定された場合は無視される。
-- [* force]:終了後即時にリンク先へと移動する場合はtrueとする。
-- [* @context]: JSON-LDの名前空間を追加定義する。 "@context": { "jspsych": "https://goemon.cloud/ns/jspsych#" } のような形で定義可能
+- **url (必須)**: リンク先のURL。?key1=value1&key2=value2&...
+- **text**: 終了時のリンクボタンに与える文字列。省略した場合は「OK」とする。forceにtrueが指定された場合は無視される。
+- **force**:終了後即時にリンク先へと移動する場合はtrueとする。
+- **@context**: JSON-LDの名前空間を追加定義する。 "@context": { "jspsych": "https://goemon.cloud/ns/jspsych#" } のような形で定義可能

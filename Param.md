@@ -20,7 +20,7 @@ Param
 
 ## GOEMON_GENERATE_ID_FOR_DISTRIBUTOR
 
-仮名IDでのユーザの識別可能範囲を制御することができる真偽値(true/false)です。詳細は [context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ.md)(context.pseudonymUserIdプロパティ.md) を参照してください。
+仮名IDでのユーザの識別可能範囲を制御することができる真偽値(true/false)です。詳細は [context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ.md) を参照してください。
 
 ## GOEMON_AUTO_START
 
@@ -28,7 +28,7 @@ Param
 
 ## GOEMON_GROUP_IDS
 
-実験群を分ける場合などに定義します。 *A,B,C* などと群ラベルをカンマ区切り文字列として与えると、ユーザに対してこれらのラベル数ができるだけ均等になるように割り振ります。詳細は [context.groupIdプロパティ](context.groupIdプロパティ.md)(context.groupIdプロパティ.md) を参照してください。
+実験群を分ける場合などに定義します。 *A,B,C* などと群ラベルをカンマ区切り文字列として与えると、ユーザに対してこれらのラベル数ができるだけ均等になるように割り振ります。詳細は [context.groupIdプロパティ](context.groupIdプロパティ.md) を参照してください。
 
 ## GOEMON_EMAIL_ALLOWLIST
 

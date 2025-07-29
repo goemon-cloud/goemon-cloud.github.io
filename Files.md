@@ -14,4 +14,4 @@ Files
 
 ![](images/60b47041e7f7cd001e678108.png)
 
-[jsPsychのスクリプト読み込み設定](jsPsychのスクリプト読み込み設定.md)(jsPsychのスクリプト読み込み設定.md)
+[jsPsychのスクリプト読み込み設定](jsPsychのスクリプト読み込み設定.md)

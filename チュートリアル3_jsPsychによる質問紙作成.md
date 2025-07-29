@@ -14,9 +14,9 @@ links: ["jspsych", "タスクのコピー", "jspsych_survey_plugin関連ファ�
 
 # jsPsych Survey Pluginを使う準備
 GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれかの**方法でjsPsych Survey Plugin関連ファイルを準備する必要があります。
-- https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn を[タスクのコピー]により複製する
+- https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn を[タスクのコピー](タスクのコピー.md)により複製する
 または、
-- [jsPsych Survey Plugin関連ファイルのアップロード]を参考に新規タスクを作成し、関連ファイルをアップロードする
+- [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.md)を参考に新規タスクを作成し、関連ファイルをアップロードする
 
 # タスク名の設定
 タスクの準備をしたら、必要に応じてタスク名を変更します。タスク名右の編集ボタンをクリックします。

@@ -19,4 +19,4 @@ jsPsych使用上の説明などはコード中のコメント (// コメント) 
 ![](images/60b47041e7f7cd001e678108.png)
 
 
-[jsPsychが見つからないエラー](jsPsychが見つからないエラー.md)(jsPsychが見つからないエラー.md)
+[jsPsychが見つからないエラー](jsPsychが見つからないエラー.md)

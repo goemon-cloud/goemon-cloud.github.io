@@ -36,10 +36,10 @@ cogtask.me固有の機能にアクセスすることができます。
 
 ```
 ## pseudonymUserIdプロパティ
-[context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ.md)(context.pseudonymUserIdプロパティ.md) を参照してください。
+[context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ.md) を参照してください。
 
 ## groupIdプロパティ
-[context.groupIdプロパティ](context.groupIdプロパティ.md)(context.groupIdプロパティ.md) を参照してください。
+[context.groupIdプロパティ](context.groupIdプロパティ.md) を参照してください。
 
 ## userEmailDomainプロパティ
 実行中のユーザのEメールアドレスにおけるドメイン名を取得するためのプロパティです。ユーザのEメールアドレスが hogehoge-fugafuga@gmail.com の場合には、gmail.com となります。
@@ -54,10 +54,10 @@ cogtask.me固有の機能にアクセスすることができます。
 
 ```
 ## userStorageプロパティ
-[context.userStorageプロパティ](context.userStorageプロパティ.md)(context.userStorageプロパティ.md) を参照してください。
+[context.userStorageプロパティ](context.userStorageプロパティ.md) を参照してください。
 
 ## messagingプロパティ
-[context.messagingプロパティ](context.messagingプロパティ.md)(context.messagingプロパティ.md) を参照してください。
+[context.messagingプロパティ](context.messagingプロパティ.md) を参照してください。
 
 ## getGlobal(propertyName)メソッド
 JavaScriptのwindowオブジェクトから指定されたプロパティを取得します。

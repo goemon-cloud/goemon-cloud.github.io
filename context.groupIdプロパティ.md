@@ -10,7 +10,7 @@ links: ["param"]
 # context.groupIdプロパティ
 
 context.groupIdプロパティ
-GO-E-MONでは、設定タブ [Param](Param.md)(Param.md) に GOEMON_GROUP_IDSを指定することで、各ユーザにグループを示すラベルを設定することができます。
+GO-E-MONでは、設定タブ [Param](Param.md) に GOEMON_GROUP_IDSを指定することで、各ユーザにグループを示すラベルを設定することができます。
 GOEMON_GROUP_IDSに *A,B,C* などと群ラベルをカンマ区切り文字列として与えると、ユーザに対してこれらのラベル数ができるだけ均等になるように割り振ります。設定されたラベルは context.groupId プロパティで取得できます。
 また、Personaryへ送信されるデータ中には cogPDSGroup プロパティとしてこの値が格納されます。
 

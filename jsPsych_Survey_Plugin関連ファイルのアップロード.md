@@ -27,7 +27,7 @@ newTitleというタスクが作成されますので、タスク名を変更し
 # ライブラリの追加(jsPsych配布パッケージ)
 jsPsychを使用するには、jsPsychとして配布されているコードをロードするようにGO-E-MONに指示する必要があります。これは以下の手順で実施します。
 - jsPsychのパッケージ(Dist archive)をダウンロードする https://github.com/jspsych/jsPsych/releases
-- jsPsychのパッケージに含まれるファイルのうち、必要なものをGO-E-MONのファイル([Files])タブにアップロードする
+- jsPsychのパッケージに含まれるファイルのうち、必要なものをGO-E-MONのファイル([Files](Files.md))タブにアップロードする
 - アップロードしたファイルの読み込み優先度を変更する
 
 jsPsych Survey Pluginを利用するためには、jsPsychのパッケージに含まれるファイルのうち、以下のファイルをアップロードします。

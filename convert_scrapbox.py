@@ -65,42 +65,50 @@ def parse_scrapbox_line(text, max_heading_level=3, page_titles=None, output_dir=
     if text.startswith('>'):
         return text
     
-    # Handle list items with asterisks (before other indented content)
+    # Store original indentation information
+    original_text = text
+    indent_prefix = ''
+    content_to_process = text
+    
+    # Check for list items with asterisks
     if text.lstrip().startswith('*') and (text.startswith(' ') or text.startswith('*')):
         # Count leading spaces
         space_count = len(text) - len(text.lstrip(' '))
-        # Remove spaces and asterisk
-        content = text.lstrip(' ').lstrip('*').lstrip()
+        # Remove spaces and asterisk to get content
+        content_to_process = text.lstrip(' ').lstrip('*').lstrip()
         
         # Calculate indentation level based on 4-space increments
         if space_count == 0 and text.startswith('*'):
             # Top level: no spaces, starts with *
-            return f'- {content}'
+            indent_prefix = '- '
         elif space_count % 4 == 0:
             # Each 4 spaces = one indent level
             indent_level = space_count // 4
-            indent = '  ' * indent_level
-            return f'{indent}- {content}'
+            indent_prefix = '  ' * indent_level + '- '
         else:
             # Non-standard spacing, keep as is
             return text
-    
-    # Other indented content
-    if text.startswith(' '):
+    # Check for other indented content
+    elif text.startswith(' '):
         # Check for space + tab pattern (second level)
         if len(text) > 1 and text[1] == '\t':
             # Second level: 1 space + tab
-            return f'  - {text[2:]}'  # Remove space and tab, add two spaces + dash
+            indent_prefix = '  - '
+            content_to_process = text[2:]
         else:
             # First level: single space (or multiple spaces in code block)
             # Count leading spaces
             space_count = len(text) - len(text.lstrip(' '))
             if space_count == 1:
                 # Single space = first level list
-                return f'- {text[1:]}'
+                indent_prefix = '- '
+                content_to_process = text[1:]
             else:
                 # Multiple spaces = keep as is (likely code)
-                return text
+                pass  # Keep original text
+    
+    # Now process the content (without indentation)
+    text = content_to_process
     
     # Skip hashtag conversion for lines that look like jQuery code
     if '$(' in text and '#' in text:
@@ -196,9 +204,20 @@ def parse_scrapbox_line(text, max_heading_level=3, page_titles=None, output_dir=
     
     text = re.sub(r'\[([^\]]+)\]\((https://scrapbox\.io/[^)]+)\)', replace_scrapbox_link, text)
     
-    # [link] internal link
+    # [link] internal link - process last to avoid conflicts
     def replace_internal_link(match):
+        full_match = match.group(0)
         link_text = match.group(1)
+        
+        # Skip if it's a formatting pattern
+        if link_text.startswith('*') or link_text.startswith('/'):
+            return full_match
+        
+        # Skip if it's a URL
+        if link_text.startswith('http://') or link_text.startswith('https://'):
+            return full_match
+        
+        # Process as internal link
         if page_titles:
             # Try exact match first
             if link_text in page_titles:
@@ -212,13 +231,25 @@ def parse_scrapbox_line(text, max_heading_level=3, page_titles=None, output_dir=
                     filename = link_text_with_underscores.replace(' ', '_').replace('/', '_')
                     filename = re.sub(r'[<>:"|?*]', '', filename)
                     return f'[{link_text}]({filename}.md)'
+            # Try with underscores converted to spaces
+            elif '_' in link_text:
+                link_text_with_spaces = link_text.replace('_', ' ')
+                if link_text_with_spaces in page_titles:
+                    filename = link_text_with_spaces.replace(' ', '_').replace('/', '_')
+                    filename = re.sub(r'[<>:"|?*]', '', filename)
+                    return f'[{link_text}]({filename}.md)'
         
         # Default: just convert to .md link
         filename = link_text.replace(' ', '_').replace('/', '_')
         filename = re.sub(r'[<>:"|?*]', '', filename)
         return f'[{link_text}]({filename}.md)'
     
-    text = re.sub(r'\[([^\]]+)\]', replace_internal_link, text)
+    # Match [text] but not [text](url) - use negative lookahead
+    text = re.sub(r'\[([^\]]+)\](?!\()', replace_internal_link, text)
+    
+    # Apply indent prefix if any
+    if indent_prefix:
+        return indent_prefix + text
     
     return text
 

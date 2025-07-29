@@ -32,7 +32,7 @@ newTitleというタスクが作成されますので、タスク名を変更し
 ここから、 https://www.jspsych.org/v8/tutorials/rt-task/ にしたがってコードを記述していくのですが、jsPsychを使用するには、*Part 1: Creating a blank experiment* に記載されているように、jsPsychとして配布されているコードをロードするようにGO-E-MONに指示する必要があります。これは以下の手順で実施します。
 - jsPsychのパッケージ(Dist archive)をダウンロードする https://github.com/jspsych/jsPsych/releases
   - https://github.com/jspsych/jsPsych/releases/tag/jspsych%408.2.1 のDist archiveを例に解説します。
-- jsPsychのパッケージに含まれるファイルのうち、必要なものをGO-E-MONのファイル([Files])タブにアップロードする
+- jsPsychのパッケージに含まれるファイルのうち、必要なものをGO-E-MONのファイル([Files](Files.md))タブにアップロードする
 - アップロードしたファイルの読み込み優先度を変更する
 
 このチュートリアルでは、jsPsychのパッケージに含まれるファイルのうち、以下のファイルをアップロードします。
@@ -201,10 +201,10 @@ jsPsychで表示する画像や動画、音声もファイル([Files](Files.md))
 
 ```
 jsPsychのコードをcogtask.me用で動作させる場合、以下の点を変更する必要があります。
-- [* jsPsychオブジェクトの取得] ... jsPsychのタイムラインを定義する前に、 [contextオブジェクト]の [/ getGlobal(propertyName)メソッド] を用いてjspsych.js等が定義したjsPsychオブジェクトを取得しておく必要があります。
-- [* jsPsych用の表示領域の作成] ... jsPsychが画面表示をする領域を[jQuery]等を用いて明示的に作成します。これを指定しないと、タスク実行時にコードエディタなどが画面から消去されてしまいます。
-- [* 画像リソース等のURL解決] ... jsPsychからファイル([Files])タブにアップロードした画像ファイル等を参照する際は [contextオブジェクト]の [/ getFileURL(filename)メソッド] によってファイルのURLを取得し、jsPsychに与える必要があります。
-- [* 終了時のログ送信処理] ... タスク終了時に  [contextオブジェクト]の [/ finish(summary, detail)メソッド] によってログとして保存する情報を構築する必要があります。
+- **jsPsychオブジェクトの取得** ... jsPsychのタイムラインを定義する前に、 [contextオブジェクト](contextオブジェクト.md)の *getGlobal(propertyName)メソッド* を用いてjspsych.js等が定義したjsPsychオブジェクトを取得しておく必要があります。
+- **jsPsych用の表示領域の作成** ... jsPsychが画面表示をする領域を[jQuery](jQuery.md)等を用いて明示的に作成します。これを指定しないと、タスク実行時にコードエディタなどが画面から消去されてしまいます。
+- **画像リソース等のURL解決** ... jsPsychからファイル([Files](Files.md))タブにアップロードした画像ファイル等を参照する際は [contextオブジェクト](contextオブジェクト.md)の *getFileURL(filename)メソッド* によってファイルのURLを取得し、jsPsychに与える必要があります。
+- **終了時のログ送信処理** ... タスク終了時に  [contextオブジェクト](contextオブジェクト.md)の *finish(summary, detail)メソッド* によってログとして保存する情報を構築する必要があります。
 
 ## コードの実行
 コードを記述したら、実行してみましょう。

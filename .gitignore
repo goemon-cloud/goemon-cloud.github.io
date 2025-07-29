@@ -1,3 +1,8 @@
 .python-version
 
 .claude
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
