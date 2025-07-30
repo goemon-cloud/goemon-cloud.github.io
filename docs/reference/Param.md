@@ -22,19 +22,12 @@ Param
 
 設定タブでは以下のパラメータを設定することができます。
 
-## GOEMON_GENERATE_ID_FOR_DISTRIBUTOR
+## GOEMON_ パラメータ
 
-仮名IDでのユーザの識別可能範囲を制御することができる真偽値(true/false)です。詳細は [context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ.html) を参照してください。
+GOEMONシステムで特別な処理が行われるパラメータです：
 
-## GOEMON_AUTO_START
-
-一度実行したタスクを自動的に開始するように設定できる真偽値(true/false)です。
-
-## GOEMON_GROUP_IDS
-
-実験群を分ける場合などに定義します。 *A,B,C* などと群ラベルをカンマ区切り文字列として与えると、ユーザに対してこれらのラベル数ができるだけ均等になるように割り振ります。詳細は [context.groupIdプロパティ](context.groupIdプロパティ.html) を参照してください。
-
-## GOEMON_EMAIL_ALLOWLIST
-
-ユーザをEメールアドレスにより制限する場合に定義します。@hogehoge.com;@fugafuga.com などとEメールアドレスのドメインをセミコロン区切り文字列として与えると、そのドメイン外のユーザに対しては再ログインするよう促すメッセージが表示されます。
+- [GOEMON_GENERATE_ID_FOR_DISTRIBUTOR](GOEMON_GENERATE_ID_FOR_DISTRIBUTOR.html) - 仮名IDの識別可能範囲を配信者内に拡張する
+- [GOEMON_AUTO_START](GOEMON_AUTO_START.html) - 一度実行したタスクを自動的に開始する
+- [GOEMON_GROUP_IDS](GOEMON_GROUP_IDS.html) - 実験群を分ける場合の群ラベル定義
+- [GOEMON_EMAIL_ALLOWLIST](GOEMON_EMAIL_ALLOWLIST.html) - ユーザをEメールアドレスのドメインで制限する
 
