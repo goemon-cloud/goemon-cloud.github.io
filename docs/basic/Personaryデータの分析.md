@@ -19,10 +19,12 @@ Personaryデータの分析方法について、以下の動画で詳しく解�
 
 ### 1. 分析環境の起動
 
-Personaryアプリ自体にはデータを分析ツールへ送り出す機能がないため、専用の管理ツールを使用します。
+Personaryアプリ自体にはデータを分析ツールへ送り出す機能がないため、専用の管理ツールを使用してデータを抽出します。
 
 分析ツールは以下で公開しています：
 <https://github.com/goemon-cloud/notebook>
+
+このツールの実行は、 [mybinder.org](https://mybinder.org) または 国立情報学研究所の [データ解析機能](https://support.rdm.nii.ac.jp/usermanual/DataAnalysis-01/) のいずれかで行うことができます。[私はGakuNin RDMを使えますか？](https://support.rdm.nii.ac.jp/about/#a2) のページで、「データ解析」が記載されている機関の場合は、国立情報学研究所のデータ解析機能を利用できます。それ以外の場合は、mybinder.orgを利用してください。
 
 1. **[launch binder]ボタンをクリック** - 分析環境（JupyterLab）が起動します
 2. **[00_PLR初期設定]を選択** - Jupyter Notebookが開きます
