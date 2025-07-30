@@ -2,7 +2,7 @@
 layout: default
 parent: Param
 grand_parent: リファレンス
-nav_order: 4
+nav_order: 5
 
 title: "GOEMON_EMAIL_ALLOWLIST"
 created: 2025-07-30T10:00:00Z

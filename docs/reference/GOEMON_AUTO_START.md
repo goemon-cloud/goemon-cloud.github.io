@@ -2,7 +2,7 @@
 layout: default
 parent: Param
 grand_parent: リファレンス
-nav_order: 2
+nav_order: 3
 
 title: "GOEMON_AUTO_START"
 created: 2025-07-30T10:00:00Z

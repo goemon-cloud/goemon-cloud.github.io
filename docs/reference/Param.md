@@ -26,6 +26,7 @@ Param
 
 GOEMONシステムで特別な処理が行われるパラメータです：
 
+- [GOEMON_FRAMEWORK](GOEMON_FRAMEWORK.html) - タスクで使用するフレームワーク（jsPsychなど）を指定する
 - [GOEMON_GENERATE_ID_FOR_DISTRIBUTOR](GOEMON_GENERATE_ID_FOR_DISTRIBUTOR.html) - 仮名IDの識別可能範囲を配信者内に拡張する
 - [GOEMON_AUTO_START](GOEMON_AUTO_START.html) - 一度実行したタスクを自動的に開始する
 - [GOEMON_GROUP_IDS](GOEMON_GROUP_IDS.html) - 実験群を分ける場合の群ラベル定義
