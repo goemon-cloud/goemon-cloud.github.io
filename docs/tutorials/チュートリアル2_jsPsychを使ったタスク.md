@@ -198,7 +198,7 @@ jsPsychで表示する画像や動画、音声もファイル([Files](../referen
  jsPsych.run(timeline);
 
 ```
-jsPsychのコードをcogtask.me用で動作させる場合、以下の点を変更する必要があります。
+jsPsychのコードをGO-E-MON用で動作させる場合、以下の点を変更する必要があります。
 - **jsPsychオブジェクトの取得** ... jsPsychのタイムラインを定義する前に、 [contextオブジェクト](../reference/contextオブジェクト.html)の *getGlobal(propertyName)メソッド* を用いてjspsych.js等が定義したjsPsychオブジェクトを取得しておく必要があります。
 - **jsPsych用の表示領域の作成** ... jsPsychが画面表示をする領域を[jQuery](../reference/jQuery.html)等を用いて明示的に作成します。これを指定しないと、タスク実行時にコードエディタなどが画面から消去されてしまいます。
 - **画像リソース等のURL解決** ... jsPsychからファイル([Files](../reference/Files.html))タブにアップロードした画像ファイル等を参照する際は [contextオブジェクト](../reference/contextオブジェクト.html)の *getFileURL(filename)メソッド* によってファイルのURLを取得し、jsPsychに与える必要があります。
