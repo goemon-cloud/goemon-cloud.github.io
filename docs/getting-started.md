@@ -35,5 +35,4 @@ GO-E-MONとブラウザだけで実験タスクを実装し、配信すること
 ## 4. データ分析
 
 収集したデータはPersonaryに保存されます。
-
-- [分析環境の利用](./advanced/分析環境の利用.html)
+Personaryに保存されたデータを分析するためには、 [Personaryデータの分析](./basic/Personaryデータの分析.html) を参考にしてください。
