@@ -3,6 +3,7 @@ layout: default
 title: contextオブジェクト
 parent: リファレンス
 nav_order: 1
+has_children: true
 ---
 
 # contextオブジェクト

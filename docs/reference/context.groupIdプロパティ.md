@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: リファレンス
-nav_order: 14
+parent: contextオブジェクト
+grand_parent: リファレンス
+nav_order: 1
 
 title: "context.groupIdプロパティ"
 created: 2022-03-25T15:22:52Z

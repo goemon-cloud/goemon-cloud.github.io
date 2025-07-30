@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: リファレンス
-nav_order: 20
+parent: contextオブジェクト
+grand_parent: リファレンス
+nav_order: 7
+has_children: true
 
 title: "context.messagingプロパティ"
 created: 2022-06-28T19:01:39Z

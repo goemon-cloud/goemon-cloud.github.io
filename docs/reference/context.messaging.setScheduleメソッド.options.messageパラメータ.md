@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: リファレンス
-nav_order: 17
+parent: context.messaging.setScheduleメソッド
+grand_parent: context.messagingプロパティ
+nav_order: 1
 
 title: "context.messaging.setScheduleメソッド.options.messageパラメータ"
 created: 2022-06-30T13:23:21Z
@@ -9,7 +10,6 @@ updated: 2022-06-30T14:40:30Z
 id: "62bd25368f073a001dfbf914"
 views: 9
 ---
-
 # context.messaging.setScheduleメソッド.options.messageパラメータ
 
 context.messaging.setScheduleメソッド.options.messageパラメータ
@@ -30,5 +30,4 @@ messageパラメータには scheduled, replyの2つのパラメータが指定�
  },
 
 ```
-
 ---

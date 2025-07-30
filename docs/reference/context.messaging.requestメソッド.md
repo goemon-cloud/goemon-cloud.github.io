@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: リファレンス
-nav_order: 15
+parent: context.messagingプロパティ
+grand_parent: contextオブジェクト
+nav_order: 1
 
 title: "context.messaging.requestメソッド"
 created: 2022-06-30T12:23:58Z
@@ -9,7 +10,6 @@ updated: 2022-06-30T13:13:45Z
 id: "62bd174ae1c50a001e6e5bb2"
 views: 23
 ---
-
 # context.messaging.requestメソッド
 
 context.messaging.requestメソッド
