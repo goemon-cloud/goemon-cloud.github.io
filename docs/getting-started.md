@@ -12,7 +12,7 @@ permalink: /docs/getting-started
 
 ## 1. アカウント作成
 
-[GO-E-MON](https://goemon.cloud) を開き、Googleアカウントでログインします。
+ブラウザで [GO-E-MON](https://goemon.cloud) を開き、Googleアカウントでログインします。
 
 ## 2. Personaryの設定
 

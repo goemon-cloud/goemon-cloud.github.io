@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Privacy Policy"
-nav_order: 6
+nav_order: 8
 created: 2021-06-08T14:00:57Z
 updated: 2021-11-11T12:02:15Z
 id: "60bef987ee0a42001c684c0c"

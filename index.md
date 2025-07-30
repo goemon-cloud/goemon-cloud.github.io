@@ -31,8 +31,18 @@ GO-E-MONは、参加者それぞれにパーソナルデータストアを持っ
 
 実験の開始方法については [Getting Started](./docs/getting-started.html) をご覧ください。
 
+## 開発・運営
+
+GO-E-MON（旧称cogtask.me）は、谷沢 智史・東京大学開研究室が開発し、現在試験運用中です。
+
 ## 参考文献
 
 GO-E-MONシステムの詳細については、以下の論文をご参照ください：
 
 Yazawa, S., Sakaguchi, K., & Hiraki, K. (2021). GO-E-MON: A New Online Platform for Decentralized Cognitive Science. *Big Data and Cognitive Computing*, 5(4), 76. [https://doi.org/10.3390/bdcc5040076](https://doi.org/10.3390/bdcc5040076)
+
+## 関連情報
+
+- [利用規約](Terms_of_Use.html)
+- [プライバシーポリシー](Privacy_Policy.html)
+- [お問い合わせ](お問い合わせ.html)
