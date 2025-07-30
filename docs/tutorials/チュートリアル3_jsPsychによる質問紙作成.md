@@ -181,5 +181,5 @@ GO-E-MONのエディタが邪魔で*はじめる*ボタンが見えない場合�
 
 
 # 実施確認
-タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](../advanced/Jupyter_NotebookでPersonaryのデータを分析する.html)を参照してください。
+タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Personaryデータの分析](../basic/Personaryデータの分析.html)を参照してください。
 ![](/images/60d2814daf6dbd004ac13fe8.png)

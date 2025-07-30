@@ -54,5 +54,5 @@ Personaryアプリ自体にはデータを分析ツールへ送り出す機能�
 
 より詳細な分析を行う場合は、以下のページを参照してください：
 
-- [Jupyter NotebookでPersonaryのデータを分析する](../advanced/Jupyter_NotebookでPersonaryのデータを分析する.html)
+- [Jupyter NotebookでPersonaryのデータを分析する（高度な使い方）](../advanced/Jupyter_NotebookでPersonaryのデータを分析する.html)
 - [分析環境の利用](../advanced/分析環境の利用.html)
