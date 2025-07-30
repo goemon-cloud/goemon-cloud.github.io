@@ -23,7 +23,7 @@ Personaryの設定にもGoogleアカウントが必要です。**GO-E-MONでの�
 
 GO-E-MONのPersonary設定は、アカウントメニューの「Personary同期設定」から行います。
 
-(参考: [Personaryの設定変更を行う](./advanced/Personaryの設定変更を行う.html))
+(参考: [Personaryの設定変更を行う](./basic/Personaryの設定変更を行う.html))
 
 ## 3. タスク作成・配信
 

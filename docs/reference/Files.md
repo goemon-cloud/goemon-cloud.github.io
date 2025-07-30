@@ -14,5 +14,3 @@ Files
 
 [jsPsychのスクリプト読み込み設定](jsPsychのスクリプト読み込み設定.html)
 
-
----

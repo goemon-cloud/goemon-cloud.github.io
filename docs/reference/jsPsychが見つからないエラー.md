@@ -18,5 +18,3 @@ jsPsychの場合は、 jspsych.js が他のファイル(プラグイン等)よ�
 ![](/images/60c984132531b8001c2dba24.png)
 
 
-
----

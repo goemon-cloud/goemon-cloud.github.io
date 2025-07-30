@@ -89,5 +89,3 @@ summary, detailパラメータについては *finish(summary, detail, options)*
 
 
 ---
-
----

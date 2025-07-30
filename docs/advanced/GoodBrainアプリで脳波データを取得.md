@@ -1,11 +1,11 @@
 ---
 layout: default
-parent: チュートリアル
-nav_order: 10
+parent: 高度な機能
+nav_order: 20
 
 title: "GoodBrainアプリで脳波データを取得"
 created: 2023-01-03T16:58:13Z
-updated: 2023-01-04T13:50:12Z
+updated: 2025-07-30T13:50:12Z
 id: "63b3e013d59766001d55ad66"
 views: 96
 links: ["お問い合わせ", "タスクのコピー", "チュートリアル2:_jspsychを使ったタスク", "jspsych_survey_plugin関連ファイルのアップロード", "files", "javascript", "deployment", "debugger", "jupyter_notebookでpersonaryのデータを分析する"]

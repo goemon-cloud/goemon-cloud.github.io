@@ -10,5 +10,3 @@ nav_order: 3
 jQuery
 jQueryはJavaScriptの記述を効率的に行うためのライブラリの1つです。長い歴史を持ち、多くのコード例がネット上に置いてあります。
 <https://jquery.com/>
-
----

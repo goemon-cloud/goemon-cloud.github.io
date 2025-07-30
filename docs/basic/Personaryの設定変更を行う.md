@@ -1,11 +1,11 @@
 ---
 layout: default
-parent: 高度な機能
-nav_order: 12
+parent: 基本操作
+nav_order: 5
 
 title: "Personaryの設定変更を行う"
 created: 2021-07-06T08:43:21Z
-updated: 2025-04-24T07:59:03Z
+updated: 2025-07-30T07:59:03Z
 id: "60e399168dfdb600228235f8"
 views: 89
 links: ["旧personaryから新personaryへの移行"]
@@ -23,4 +23,4 @@ Personaryのフレンド登録を再度行いたい場合などは、<https://go
 
 さらに*次へ*ボタンを押すと、GO-E-MONのフレンド登録方法を確認できます。
 
-[旧Personaryから新Personaryへの移行](旧Personaryから新Personaryへの移行.html)
+[旧Personaryから新Personaryへの移行](../advanced/旧Personaryから新Personaryへの移行.html)

@@ -33,5 +33,3 @@ optionsパラメータには以下のキーを指定することができます�
 - **force**:終了後即時にリンク先へと移動する場合はtrueとする。
 - **@context**: JSON-LDの名前空間を追加定義する。 "@context": { "jspsych": "<https://goemon.cloud/ns/jspsych#"> } のような形で定義可能
 
-
----

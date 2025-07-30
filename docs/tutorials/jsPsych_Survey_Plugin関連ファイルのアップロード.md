@@ -50,5 +50,3 @@ Survey Pluginは <https://www.jspsych.org/7.3/plugins/survey/#css> に記載が�
 この解説を一通り実行すると、以下のようなファイルがアップロードされているはずです。
 ![](/images/634e0fcce1401e0022496e75.png)
 
-
----
