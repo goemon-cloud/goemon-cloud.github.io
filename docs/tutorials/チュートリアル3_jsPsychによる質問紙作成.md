@@ -12,9 +12,9 @@ jsPsychを使うと質問紙を簡単に作成することができます。
 
 # jsPsych Survey Pluginを使う準備
 GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれかの**方法でjsPsych Survey Plugin関連ファイルを準備する必要があります。
-- <https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn> を[タスクのコピー](../basic/タスクのコピー/)により複製する
+- <https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn> を[タスクのコピー](../basic/タスクのコピー.html)により複製する
 または、
-- [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード/)を参考に新規タスクを作成し、関連ファイルをアップロードする
+- [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.html)を参考に新規タスクを作成し、関連ファイルをアップロードする
 
 # タスク名の設定
 タスクの準備をしたら、必要に応じてタスク名を変更します。タスク名右の編集ボタンをクリックします。
@@ -24,7 +24,7 @@ GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれか�
 ![](/images/634e172d3dcdc8001d3f3ee0.png)
 
 # コードの記述
-タスクとして実行する [JavaScript](../reference/JavaScript/) コードを記述します。ここでは、Survey Plugin <https://www.jspsych.org/7.3/plugins/survey/> のデモ *Single and multiple item Likert-style scales* 相当のコードを記述します。(jsPsychによるデモ: <https://www.jspsych.org/7.3/demos/jspsych-survey-demo3.html> )
+タスクとして実行する [JavaScript](../reference/JavaScript.html) コードを記述します。ここでは、Survey Plugin <https://www.jspsych.org/7.3/plugins/survey/> のデモ *Single and multiple item Likert-style scales* 相当のコードを記述します。(jsPsychによるデモ: <https://www.jspsych.org/7.3/demos/jspsych-survey-demo3.html> )
 
 以下は  *Single and multiple item Likert-style scales* の例に対してGO-E-MON用の初期化処理を追加したものです。変更点には **// goemon:** というコメントを記載しています。
 
@@ -153,7 +153,7 @@ GO-E-MONのエディタが邪魔で*はじめる*ボタンが見えない場合�
 また、スクリプトの誤りなどでエラーが発生した場合は、デバッグタブから警告・エラーを確認することができます。
 
 # 説明文の設定
-説明文にはタスクの説明を記述することができます。*説明文* タブに以下の文字列を記述します。説明文の記述には[Markdown](../reference/Markdown/)を使用することができます。
+説明文にはタスクの説明を記述することができます。*説明文* タブに以下の文字列を記述します。説明文の記述には[Markdown](../reference/Markdown.html)を使用することができます。
 
 ```markdown
  [jsPsych](https://www.jspsych.org/)のSurvey Pluginを
@@ -181,7 +181,7 @@ GO-E-MONのエディタが邪魔で*はじめる*ボタンが見えない場合�
 
 
 # 実施確認
-タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](../advanced/Jupyter_NotebookでPersonaryのデータを分析する/)を参照してください。
+タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](../advanced/Jupyter_NotebookでPersonaryのデータを分析する.html)を参照してください。
 ![](/images/60d2814daf6dbd004ac13fe8.png)
 
 ---

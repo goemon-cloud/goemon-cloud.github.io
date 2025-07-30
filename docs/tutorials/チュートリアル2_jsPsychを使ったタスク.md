@@ -9,7 +9,7 @@ nav_order: 2
 
 チュートリアル2: jsPsychを使ったタスク
 JavaScriptでタスクを記述する場合、 [jsPsych](https://www.jspsych.org/) のようなライブラリを用いることで、既存のコードを再利用できるなどの恩恵を受けることができます。そこで、jsPsychのTutorials > Demo Experiment: Simple Reaction Time Task <https://www.jspsych.org/v8/tutorials/rt-task/> をGO-E-MONで実施するチュートリアルを紹介します。
-基本的な流れは [チュートリアル1: 簡単なアンケート](チュートリアル1_簡単なアンケート/) と同様です。
+基本的な流れは [チュートリアル1: 簡単なアンケート](チュートリアル1_簡単なアンケート.html) と同様です。
 
 # 作成例
 実際の動作を確認するためのサンプルです。
@@ -30,7 +30,7 @@ newTitleというタスクが作成されますので、タスク名を変更し
 ここから、 <https://www.jspsych.org/v8/tutorials/rt-task/> にしたがってコードを記述していくのですが、jsPsychを使用するには、*Part 1: Creating a blank experiment* に記載されているように、jsPsychとして配布されているコードをロードするようにGO-E-MONに指示する必要があります。これは以下の手順で実施します。
 - jsPsychのパッケージ(Dist archive)をダウンロードする <https://github.com/jspsych/jsPsych/releases>
   - <https://github.com/jspsych/jsPsych/releases/tag/jspsych%408.2.1> のDist archiveを例に解説します。
-- jsPsychのパッケージに含まれるファイルのうち、必要なものをGO-E-MONのファイル([Files](../reference/Files/))タブにアップロードする
+- jsPsychのパッケージに含まれるファイルのうち、必要なものをGO-E-MONのファイル([Files](../reference/Files.html))タブにアップロードする
 - アップロードしたファイルの読み込み優先度を変更する
 
 このチュートリアルでは、jsPsychのパッケージに含まれるファイルのうち、以下のファイルをアップロードします。
@@ -41,7 +41,7 @@ newTitleというタスクが作成されますので、タスク名を変更し
 - dist/plugin-preload.js
 ![](/images/634e042e47ef73001d7810c6.png)
 
-これらのファイルをファイル([Files](../reference/Files/))タブにドラッグ＆ドロップします。すると、現在のタスクに以下のようにファイルが追加されます。
+これらのファイルをファイル([Files](../reference/Files.html))タブにドラッグ＆ドロップします。すると、現在のタスクに以下のようにファイルが追加されます。
 ![](/images/634dfda3df7f360023c0d4fe.png)
 
 
@@ -50,13 +50,13 @@ jsPsychでは、jspsych.jsが他の.jsファイルよりも先に読み込む必
 ![](/images/60ea307425c67900213d5b76.png)
 
 ## 刺激の追加
-jsPsychで表示する画像や動画、音声もファイル([Files](../reference/Files/))タブにアップロードすることで、JavaScriptから読み込むことが可能になります。ここでは、jsPsychパッケージ中の examplesフォルダ内のimgフォルダにある blue.png とorange.pngを追加します。
+jsPsychで表示する画像や動画、音声もファイル([Files](../reference/Files.html))タブにアップロードすることで、JavaScriptから読み込むことが可能になります。ここでは、jsPsychパッケージ中の examplesフォルダ内のimgフォルダにある blue.png とorange.pngを追加します。
 
 ![](/images/60eaa0be783aa7002375c26e.png)
 
 
 # コードの記述
-タスクとして実行する [JavaScript](../reference/JavaScript/) コードを記述します。ここでは、チュートリアル <https://www.jspsych.org/tutorials/rt-task/> の*The final code* 相当のコードを記述します。
+タスクとして実行する [JavaScript](../reference/JavaScript.html) コードを記述します。ここでは、チュートリアル <https://www.jspsych.org/tutorials/rt-task/> の*The final code* 相当のコードを記述します。
 
 以下は *The final code* をGO-E-MON用に変更したものです。変更点には **// goemon:** というコメントを記載しています。
 
@@ -199,10 +199,10 @@ jsPsychで表示する画像や動画、音声もファイル([Files](../referen
 
 ```
 jsPsychのコードをcogtask.me用で動作させる場合、以下の点を変更する必要があります。
-- **jsPsychオブジェクトの取得** ... jsPsychのタイムラインを定義する前に、 [contextオブジェクト](../reference/contextオブジェクト/)の *getGlobal(propertyName)メソッド* を用いてjspsych.js等が定義したjsPsychオブジェクトを取得しておく必要があります。
-- **jsPsych用の表示領域の作成** ... jsPsychが画面表示をする領域を[jQuery](../reference/jQuery/)等を用いて明示的に作成します。これを指定しないと、タスク実行時にコードエディタなどが画面から消去されてしまいます。
-- **画像リソース等のURL解決** ... jsPsychからファイル([Files](../reference/Files/))タブにアップロードした画像ファイル等を参照する際は [contextオブジェクト](../reference/contextオブジェクト/)の *getFileURL(filename)メソッド* によってファイルのURLを取得し、jsPsychに与える必要があります。
-- **終了時のログ送信処理** ... タスク終了時に  [contextオブジェクト](../reference/contextオブジェクト/)の *finish(summary, detail)メソッド* によってログとして保存する情報を構築する必要があります。
+- **jsPsychオブジェクトの取得** ... jsPsychのタイムラインを定義する前に、 [contextオブジェクト](../reference/contextオブジェクト.html)の *getGlobal(propertyName)メソッド* を用いてjspsych.js等が定義したjsPsychオブジェクトを取得しておく必要があります。
+- **jsPsych用の表示領域の作成** ... jsPsychが画面表示をする領域を[jQuery](../reference/jQuery.html)等を用いて明示的に作成します。これを指定しないと、タスク実行時にコードエディタなどが画面から消去されてしまいます。
+- **画像リソース等のURL解決** ... jsPsychからファイル([Files](../reference/Files.html))タブにアップロードした画像ファイル等を参照する際は [contextオブジェクト](../reference/contextオブジェクト.html)の *getFileURL(filename)メソッド* によってファイルのURLを取得し、jsPsychに与える必要があります。
+- **終了時のログ送信処理** ... タスク終了時に  [contextオブジェクト](../reference/contextオブジェクト.html)の *finish(summary, detail)メソッド* によってログとして保存する情報を構築する必要があります。
 
 ## コードの実行
 コードを記述したら、実行してみましょう。
@@ -233,7 +233,7 @@ jsPsychのコードをcogtask.me用で動作させる場合、以下の点を変
 また、スクリプトの誤りなどでエラーが発生した場合は、デバッグタブから警告・エラーを確認することができます。
 
 # 説明文の設定
-タスクの説明を設定します。*説明文* タブに以下の文字列を記述します。説明文の記述には[Markdown](../reference/Markdown/)を使用することができます。
+タスクの説明を設定します。*説明文* タブに以下の文字列を記述します。説明文の記述には[Markdown](../reference/Markdown.html)を使用することができます。
 
 ```markdown
  [jsPsych](https://www.jspsych.org/)のDemo Experiment: Simple Reaction Time TaskをGO-E-MONで実行する例です。
@@ -260,7 +260,7 @@ jsPsychのコードをcogtask.me用で動作させる場合、以下の点を変
 > タスクのJavaScriptや説明文を変更したあとは、必ず配備ボタンを押して他のユーザーにも最新版を参照できるようにする必要があります。
 
 # 実施確認
-タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](../advanced/Jupyter_NotebookでPersonaryのデータを分析する/)を参照してください。
+タスクがユーザーにより実施されると、タスク提供者のPersonaryに実施記録が格納されます。Personaryを自身のアカウントと紐付けていると、以下のように実施記録が送信されます。Personaryのデータ分析については[Jupyter NotebookでPersonaryのデータを分析する](../advanced/Jupyter_NotebookでPersonaryのデータを分析する.html)を参照してください。
 ![](/images/60d2814daf6dbd004ac13fe8.png)
 
 

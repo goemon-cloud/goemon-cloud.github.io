@@ -27,7 +27,7 @@ GO-E-MONでは、ユーザーとWebブラウザを介してやり取りするほ
 - 定期実行は、スケジュール設定後2週間の間、継続的に実行されます。2週間を超えて定期実行を設定したい場合は、2週間以内にユーザーをGO-E-MONタスクのURLに誘導し、定期実行スケジュールを再設定する必要があります
 
 ## context.messaging.request(options, callback) メソッド
-[context.messaging.requestメソッド](context.messaging.requestメソッド/) を参照してください。
+[context.messaging.requestメソッド](context.messaging.requestメソッド.html) を参照してください。
 
 ## context.messasging.send(message, callback) メソッド
 context.messaging.requestによって連携されたLINEアカウントに対してメッセージを送信します。
@@ -45,10 +45,10 @@ message引数には LINE Messaging API で紹介されている <https://develop
 メッセージの送信が完了すると、callback関数が呼び出されます。第1引数にはメッセージの送信に失敗した場合にエラーオブジェクトが格納されます。
 
 ## context.messaging.setSchedule(options, callback) メソッド
-[context.messaging.setScheduleメソッド](context.messaging.setScheduleメソッド/) を参照してください。
+[context.messaging.setScheduleメソッド](context.messaging.setScheduleメソッド.html) を参照してください。
 
 ## context.messaging.clearSchedule(callback) メソッド
-[context.messaging.setScheduleメソッド](context.messaging.setScheduleメソッド/)  により設定されたタスクの定期実行指定をキャンセルします。定期実行が未指定の場合は何もしません。
+[context.messaging.setScheduleメソッド](context.messaging.setScheduleメソッド.html)  により設定されたタスクの定期実行指定をキャンセルします。定期実行が未指定の場合は何もしません。
 
 ## context.messaging.getLastResult(callback) メソッド
 このユーザーに関して実行された定期実行結果のうち、最後に検出されたエラーと、コンソール出力を取得します。

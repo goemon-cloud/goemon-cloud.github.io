@@ -14,7 +14,7 @@ links: ["javascript", "markdown"]
 # Deployment
 
 Deployment
-タスク編集画面の 保存 ボタンを押すと、タスクのコード [JavaScript](JavaScript/) や 説明 [Markdown](Markdown/) がgoemon.cloudサーバに保存されますが、保存ボタンだけではこれらの情報はタスクの利用者から見える画面には反映されません。
+タスク編集画面の 保存 ボタンを押すと、タスクのコード [JavaScript](JavaScript.html) や 説明 [Markdown](Markdown.html) がgoemon.cloudサーバに保存されますが、保存ボタンだけではこれらの情報はタスクの利用者から見える画面には反映されません。
 変更を利用者の画面にも反映したい場合は、配備 タブより、**配備 ボタン**を押してください。
 
 ![](/images/60b471eccd21ea00223810a4.png)

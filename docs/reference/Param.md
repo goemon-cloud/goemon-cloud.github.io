@@ -18,13 +18,13 @@ Param
 
 ![](/images/62144094f85f1a001d1df588.png)
 
-タスク設定はスクリプトから [contextオブジェクト](contextオブジェクト/) を介してアクセスすることができます。
+タスク設定はスクリプトから [contextオブジェクト](contextオブジェクト.html) を介してアクセスすることができます。
 
 設定タブでは以下のパラメータを設定することができます。
 
 ## GOEMON_GENERATE_ID_FOR_DISTRIBUTOR
 
-仮名IDでのユーザの識別可能範囲を制御することができる真偽値(true/false)です。詳細は [context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ/) を参照してください。
+仮名IDでのユーザの識別可能範囲を制御することができる真偽値(true/false)です。詳細は [context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ.html) を参照してください。
 
 ## GOEMON_AUTO_START
 
@@ -32,7 +32,7 @@ Param
 
 ## GOEMON_GROUP_IDS
 
-実験群を分ける場合などに定義します。 *A,B,C* などと群ラベルをカンマ区切り文字列として与えると、ユーザに対してこれらのラベル数ができるだけ均等になるように割り振ります。詳細は [context.groupIdプロパティ](context.groupIdプロパティ/) を参照してください。
+実験群を分ける場合などに定義します。 *A,B,C* などと群ラベルをカンマ区切り文字列として与えると、ユーザに対してこれらのラベル数ができるだけ均等になるように割り振ります。詳細は [context.groupIdプロパティ](context.groupIdプロパティ.html) を参照してください。
 
 ## GOEMON_EMAIL_ALLOWLIST
 

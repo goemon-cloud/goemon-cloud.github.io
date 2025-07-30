@@ -24,4 +24,4 @@ Personaryのフレンド登録を再度行いたい場合などは、<https://go
 
 さらに*次へ*ボタンを押すと、cogtask.meのフレンド登録方法を確認できます。
 
-[旧Personaryから新Personaryへの移行](旧Personaryから新Personaryへの移行/)
+[旧Personaryから新Personaryへの移行](旧Personaryから新Personaryへの移行.html)

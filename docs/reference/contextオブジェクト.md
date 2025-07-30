@@ -28,17 +28,17 @@ cogtask.me固有の機能にアクセスすることができます。
 このタスクのURLを示す文字列です。 <https://goemon.cloud/t/{タスクID}> の形式となります。
 
 ## paramプロパティ
-タスクの設定を格納したオブジェクトです。以下のように設定名で項目を参照することができます。設定は [設定タブ](設定タブ/) から行うことができます。
+タスクの設定を格納したオブジェクトです。以下のように設定名で項目を参照することができます。設定は [設定タブ](設定タブ.html) から行うことができます。
 
 ```JavaScript
  const url = context.param.API_URL;
 
 ```
 ## pseudonymUserIdプロパティ
-[context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ/) を参照してください。
+[context.pseudonymUserIdプロパティ](context.pseudonymUserIdプロパティ.html) を参照してください。
 
 ## groupIdプロパティ
-[context.groupIdプロパティ](context.groupIdプロパティ/) を参照してください。
+[context.groupIdプロパティ](context.groupIdプロパティ.html) を参照してください。
 
 ## userEmailDomainプロパティ
 実行中のユーザのEメールアドレスにおけるドメイン名を取得するためのプロパティです。ユーザのEメールアドレスが hogehoge-fugafuga@gmail.com の場合には、gmail.com となります。
@@ -53,10 +53,10 @@ cogtask.me固有の機能にアクセスすることができます。
 
 ```
 ## userStorageプロパティ
-[context.userStorageプロパティ](context.userStorageプロパティ/) を参照してください。
+[context.userStorageプロパティ](context.userStorageプロパティ.html) を参照してください。
 
 ## messagingプロパティ
-[context.messagingプロパティ](context.messagingプロパティ/) を参照してください。
+[context.messagingプロパティ](context.messagingプロパティ.html) を参照してください。
 
 ## getGlobal(propertyName)メソッド
 JavaScriptのwindowオブジェクトから指定されたプロパティを取得します。
@@ -67,11 +67,11 @@ JavaScriptのwindowオブジェクトから指定されたプロパティを取�
 
 ```
 ## getFileURL(filename)メソッド
-ファイル([Files](Files/))タブ中のファイルを参照するためのURLを取得します。
+ファイル([Files](Files.html))タブ中のファイルを参照するためのURLを取得します。
 
 ## finish(summary, detail, options)メソッド
 タスクを終了する際に呼び出します。引数にはログとして記録するデータを格納します。summaryはPersonaryの画面に表示する文字列を、detailはJSON文字列化可能なオブジェクトを指定します。これらのデータはPersonary経由でアクセスすることができます。
-optionsパラメータによって終了時の動作を定義することができます。optionsパラメータに関する詳細は [終了時のoptionsパラメータ](終了時のoptionsパラメータ/) を参照してください。
+optionsパラメータによって終了時の動作を定義することができます。optionsパラメータに関する詳細は [終了時のoptionsパラメータ](終了時のoptionsパラメータ.html) を参照してください。
 
 ```JavaScript
  context.finish(`タスクを実施しました: 正解率${accuracy}%`, { detail: [1, 2, 3, 4] })
@@ -86,7 +86,7 @@ Personaryには *タスクのタイトル: summary* という形式でログが�
 summary, detailパラメータについては *finish(summary, detail, options)* の説明を参照してください。
 
 ## abort(options)メソッド
-タスクを中断する際に呼び出します。*finish(summary, detail, options)*との違いは、ログ送信を行わずに終了する点です。optionsパラメータによって終了時の動作を定義することができます。optionsパラメータに関する詳細は [終了時のoptionsパラメータ](終了時のoptionsパラメータ/) を参照してください。
+タスクを中断する際に呼び出します。*finish(summary, detail, options)*との違いは、ログ送信を行わずに終了する点です。optionsパラメータによって終了時の動作を定義することができます。optionsパラメータに関する詳細は [終了時のoptionsパラメータ](終了時のoptionsパラメータ.html) を参照してください。
 
 
 ---

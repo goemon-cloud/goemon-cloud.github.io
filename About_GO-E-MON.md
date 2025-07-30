@@ -27,5 +27,5 @@ See <https://www.mdpi.com/2504-2289/5/4/76> for detailed architecture and other 
 
 > We changed the domain name to cogtask.me -> goemon.cloud.
 
-- 利用規約: [Terms of Use](Terms_of_Use/) (in Japanese)
-- プライバシーポリシー: [Privacy Policy](Privacy_Policy/) (in Japanese)
+- 利用規約: [Terms of Use](Terms_of_Use.html) (in Japanese)
+- プライバシーポリシー: [Privacy Policy](Privacy_Policy.html) (in Japanese)
