@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: チュートリアル
-nav_order: 11
+nav_order: 15
 
 title: "jsPsych Survey Plugin関連ファイルのアップロード"
 created: 2022-10-18T11:22:05Z

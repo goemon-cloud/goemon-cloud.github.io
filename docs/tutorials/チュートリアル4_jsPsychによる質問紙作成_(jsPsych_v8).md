@@ -1,20 +1,27 @@
 ---
 layout: default
-title: "チュートリアル3: jsPsychによる質問紙作成"
 parent: チュートリアル
-nav_order: 3
+nav_order: 13
+
+title: "jsPsychによる質問紙作成 (jsPsych v8)"
+created: 2024-10-15T18:36:11Z
+updated: 2024-10-15T18:41:43Z
+id: "670e3789f56a75001d651cca"
+views: 19
+links: ["jspsych", "タスクのコピー", "jspsych_survey_plugin関連ファイルのアップロード", "javascript", "markdown", "jupyter_notebookでpersonaryのデータを分析する"]
 ---
 
-# チュートリアル3: jsPsychによる質問紙作成
+# チュートリアル3: jsPsychによる質問紙作成 (jsPsych v8)
 
-チュートリアル3: jsPsychによる質問紙作成
-jsPsychを使うと質問紙を簡単に作成することができます。
+チュートリアル3: jsPsychによる質問紙作成 (jsPsych v8)
+[jsPsych](https://www.jspsych.org/)を使うと質問紙を簡単に作成することができます。
+> 最新版jsPsych(v8)に関する説明です。書き途中です。
 
 # jsPsych Survey Pluginを使う準備
 GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれかの**方法でjsPsych Survey Plugin関連ファイルを準備する必要があります。
-- <https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn> を[タスクのコピー](../basic/タスクのコピー.html)により複製する
+- <https://goemon.cloud/t/aTzSoAnzDyQw1TOwPrPn> を[タスクのコピー](../basic/タスクのコピー.html)により複製する（こちらはv7です）
 または、
-- [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.html)を参考に新規タスクを作成し、関連ファイルをアップロードする
+- [jsPsych Survey Plugin関連ファイルのアップロード](jsPsych_Survey_Plugin関連ファイルのアップロード.html)を参考に新規タスクを作成し、関連ファイルをアップロードする - v8はsurvey.cssの取得方法が異なる
 
 # タスク名の設定
 タスクの準備をしたら、必要に応じてタスク名を変更します。タスク名右の編集ボタンをクリックします。
@@ -24,9 +31,9 @@ GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれか�
 ![](/images/634e172d3dcdc8001d3f3ee0.png)
 
 # コードの記述
-タスクとして実行する [JavaScript](../reference/JavaScript.html) コードを記述します。ここでは、Survey Plugin <https://www.jspsych.org/7.3/plugins/survey/> のデモ *Single and multiple item Likert-style scales* 相当のコードを記述します。(jsPsychによるデモ: <https://www.jspsych.org/7.3/demos/jspsych-survey-demo3.html> )
+タスクとして実行する [JavaScript](../reference/JavaScript.html) コードを記述します。ここでは、Survey Plugin <https://www.jspsych.org/v8/plugins/survey/> のデモ *Rating and matrix questions for Likert-style scales* 相当のコードを記述します。
 
-以下は  *Single and multiple item Likert-style scales* の例に対してGO-E-MON用の初期化処理を追加したものです。変更点には **// goemon:** というコメントを記載しています。
+以下は  *Rating and matrix questions for Likert-style scales* の例に対してGO-E-MON用の初期化処理を追加したものです。変更点には **// goemon:** というコメントを記載しています。
 
 > 実施したい質問紙の内容に合わせて変更する とコメントを記載した箇所を変更すると、質問項目を変更することができます。
 
@@ -52,7 +59,6 @@ GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれか�
     on_finish: function(data) {
       context.finish(`回答を受け付けました`, {
         data: data.values(),
-        variables: jsPsych.getAllTimelineVariables(),
       });
     }
   });
@@ -60,65 +66,84 @@ GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれか�
   /* create timeline */
   var timeline = [];
   
-  // Single and multiple item Likert-style scales: https://www.jspsych.org/7.3/demos/jspsych-survey-demo3.html
+  // Rating and matrix questions for Likert-style scales: https://www.jspsych.org/v8/plugins/survey/
   // 実施したい質問紙の内容に合わせて変更する: ここから
   const trial = {
     type: jsPsychSurvey,
-    pages: [
-      [
-        {
-          type: 'likert',
-          prompt: 'I like to eat vegetables.',
-          likert_scale_min_label: 'Strongly Disagree',
-          likert_scale_max_label: 'Strongly Agree',
-          likert_scale_values: [
-            {value: 1},
-            {value: 2},
-            {value: 3},
-            {value: 4},
-            {value: 5}
-          ]
-        }, 
-        {
-          type: 'likert',
-          prompt: 'I like to eat fruit.',
-          likert_scale_min_label: 'Strongly Disagree',
-          likert_scale_max_label: 'Strongly Agree',
-          likert_scale_values: [
-            {value: 1},
-            {value: 2},
-            {value: 3},
-            {value: 4},
-            {value: 5}
-          ]
-        },
-        {
-          type: 'likert',
-          prompt: 'I like to eat meat.',
-          likert_scale_min_label: 'Strongly Disagree',
-          likert_scale_max_label: 'Strongly Agree',
-          likert_scale_values: [
-            {value: 1},
-            {value: 2},
-            {value: 3},
-            {value: 4},
-            {value: 5}
-          ]
-        },  
-      ],
-      [
-        {
-          type: 'likert-table',
-          prompt: ' ',
-          statements: [
-            {prompt: 'I like to eat vegetables', name: 'VeggiesTable'},
-            {prompt: 'I like to eat fruit', name: 'FruitTable'},
-            {prompt: 'I like to eat meat', name: 'MeatTable'},
-          ],
-          options: ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'],
-        }
-      ]
-    ],
+    survey_json: {
+     showQuestionNumbers: false,
+     title: 'Likert scale examples',
+     pages: [
+       {
+         elements: [
+           {
+             type: 'rating',
+             name: 'like-vegetables',
+             title: 'I like to eat vegetables.',
+             description: 'Button rating scale with min/max descriptions',
+             minRateDescription: 'Strongly Disagree',
+             maxRateDescription: 'Strongly Agree',
+             displayMode: 'buttons',
+             rateValues: [1,2,3,4,5]
+           }, 
+           {
+             type: 'rating',
+             name: 'like-cake',
+             title: 'I like to eat cake.',
+             description: 'Star rating scale with min/max descriptions',
+             minRateDescription: 'Strongly Disagree',
+             maxRateDescription: 'Strongly Agree',
+             rateType: 'stars',
+             rateCount: 10,
+             rateMax: 10,
+           },
+           {
+             type: 'rating',
+             name: 'like-cooking',
+             title: 'How much do you enjoy cooking?',
+             description: 'Smiley rating scale without min/max descriptions',
+             rateType: 'smileys',
+             rateCount: 10,
+             rateMax: 10,
+             scaleColorMode: 'colored',
+           }
+         ]
+       }, {
+         elements: [
+           {
+             type: 'matrix',
+             name: 'like-food-matrix',
+             title: 'Matrix question for rating mutliple statements on the same scale.',
+             alternateRows: true,
+             isAllRowRequired: true,
+             rows: [
+               {text: 'I like to eat vegetables.', value: 'VeggiesTable'},
+               {text: 'I like to eat fruit.', value: 'FruitTable'},
+               {text: 'I like to eat cake.', value: 'CakeTable'},
+               {text: 'I like to cook.', value: 'CookTable'},
+             ],
+             columns: [{
+               "value": 5,
+               "text": "Strongly agree"
+             }, {
+               "value": 4,
+               "text": "Agree"
+             }, {
+               "value": 3,
+               "text": "Neutral"
+             }, {
+               "value": 2,
+               "text": "Disagree"
+             }, {
+               "value": 1,
+               "text": "Strongly disagree"
+             }]
+           }
+         ]
+       }
+     ]  
+    }
+ 
   };
   // 実施したい質問紙の内容に合わせて変更する: ここまで
   timeline.push(trial);
@@ -126,6 +151,7 @@ GO-E-MONでjsPsych Survey Pluginを使うためには、以下の**いずれか�
   // goemon: 上部メニューを隠す
   context.appMenu.hide();
   jsPsych.run(timeline);
+
 
 ```
 ## コードの実行
