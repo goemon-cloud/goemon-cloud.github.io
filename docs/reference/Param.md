@@ -31,4 +31,6 @@ GOEMONシステムで特別な処理が行われるパラメータです：
 - [GOEMON_AUTO_START](GOEMON_AUTO_START.html) - 一度実行したタスクを自動的に開始する
 - [GOEMON_GROUP_IDS](GOEMON_GROUP_IDS.html) - 実験群を分ける場合の群ラベル定義
 - [GOEMON_EMAIL_ALLOWLIST](GOEMON_EMAIL_ALLOWLIST.html) - ユーザをEメールアドレスのドメインで制限する
+- [GOEMON_AGREEMENT](GOEMON_AGREEMENT.html) - タスク実行前に参加者の同意を取得する
+- [GOEMON_COMPLETED_REDIRECT_URL](GOEMON_COMPLETED_REDIRECT_URL.html) - タスク完了後に参加者を別のページへリダイレクトする
 
