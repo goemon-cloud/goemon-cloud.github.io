@@ -19,3 +19,6 @@ Gemfile.lock
 
 # macOS
 .DS_Store
+
+# Server-side code: for reference
+cog-pds
