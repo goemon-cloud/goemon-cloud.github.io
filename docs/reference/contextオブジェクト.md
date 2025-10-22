@@ -68,6 +68,9 @@ JavaScriptのwindowオブジェクトから指定されたプロパティを取�
 ## getFileURL(filename)メソッド
 ファイル([Files](Files.html))タブ中のファイルを参照するためのURLを取得します。
 
+## getOneshotURL(options)メソッド
+[context.getOneshotURLメソッド](context.getOneshotURLメソッド.html) を参照してください。
+
 ## finish(summary, detail, options)メソッド
 タスクを終了する際に呼び出します。引数にはログとして記録するデータを格納します。summaryはPersonaryの画面に表示する文字列を、detailはJSON文字列化可能なオブジェクトを指定します。これらのデータはPersonary経由でアクセスすることができます。
 optionsパラメータによって終了時の動作を定義することができます。optionsパラメータに関する詳細は [終了時のoptionsパラメータ](終了時のoptionsパラメータ.html) を参照してください。

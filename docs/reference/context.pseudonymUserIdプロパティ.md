@@ -14,7 +14,6 @@ links: ["設定タブ"]
 
 # context.pseudonymUserIdプロパティ
 
-context.pseudonymUserIdプロパティ
 実行中のユーザの仮名IDを格納したオブジェクトです。以下のように参照することができます。
 
 ```JavaScript
