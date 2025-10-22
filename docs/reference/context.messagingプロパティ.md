@@ -10,16 +10,15 @@ created: 2022-06-28T19:01:39Z
 updated: 2022-06-30T14:56:04Z
 id: "62bad180cdf6fc001d65353e"
 views: 56
-links: ["context.messaging.requestメソッド", "context.messaging.setscheduleメソッド"]
+links: ["context.messaging.requestメソッド", "context.messaging.sendメソッド", "context.messaging.setscheduleメソッド"]
 ---
 
 # context.messagingプロパティ
 
-context.messagingプロパティ
-GO-E-MONでは、ユーザーとWebブラウザを介してやり取りするほかに、LINEを通じたチャットベースのタスクも実現することができます。チャットベースのタスクを実現するためには、以下の手順を踏む必要があります。
+GO-E-MONでは、ユーザーとWebブラウザを介してやり取りするほかに、LINEやメールを通じたチャット／メッセージベースのタスクも実現することができます。メッセージサービス連携の流れは以下の通りです。
 - ユーザーが当該GO-E-MONタスクにWebブラウザを通じてアクセスする
-- 当該GO-E-MONタスクのスクリプト中で、 context.messaging.request メソッドを通じてGO-E-MONアカウントとLINEアカウントとの連携要求を発行する
-- 定期実行のスケジュールを設定する
+- 当該GO-E-MONタスクのスクリプト中で、 context.messaging.request メソッドを通じて使用したいサービス（LINE、LINEグループ、メールなど）との連携要求を発行する
+- 必要に応じて定期実行のスケジュールを設定する
 
 定期実行は**最短で5分間隔**で実行可能ですが、以下の制限があります。
 - GO-E-MONサーバーにおける定期実行タスクの実行状況により、予定時間よりも遅れて実行される場合があります
@@ -29,28 +28,15 @@ GO-E-MONでは、ユーザーとWebブラウザを介してやり取りするほ
 ## context.messaging.request(options, callback) メソッド
 [context.messaging.requestメソッド](context.messaging.requestメソッド.html) を参照してください。
 
-## context.messasging.send(message, callback) メソッド
-context.messaging.requestによって連携されたLINEアカウントに対してメッセージを送信します。
-message引数には LINE Messaging API で紹介されている <https://developers.line.biz/ja/docs/messaging-api/overview/#what-you-can-do> メッセージを定義することができます。
-例えば、テキストメッセージを送信したい場合は、 <https://developers.line.biz/ja/reference/messaging-api/#text-message> を参考に以下のような値を設定します。
-
-```javascript
-  // テキストメッセージの例
-  {
-    "type": "text",
-    "text": "Hello, world"
-  }
-
-```
-メッセージの送信が完了すると、callback関数が呼び出されます。第1引数にはメッセージの送信に失敗した場合にエラーオブジェクトが格納されます。
+## context.messaging.send(message, callback) メソッド
+[context.messaging.sendメソッド](context.messaging.sendメソッド.html) を参照してください。
 
 ## context.messaging.setSchedule(options, callback) メソッド
 [context.messaging.setScheduleメソッド](context.messaging.setScheduleメソッド.html) を参照してください。
 
 ## context.messaging.clearSchedule(callback) メソッド
-[context.messaging.setScheduleメソッド](context.messaging.setScheduleメソッド.html)  により設定されたタスクの定期実行指定をキャンセルします。定期実行が未指定の場合は何もしません。
+[context.messaging.setScheduleメソッド](context.messaging.setScheduleメソッド.html) により設定されたタスクの定期実行指定をキャンセルします。定期実行が未指定の場合は何もしません。Functions ランナー経由で実行されるサーバースクリプトからも呼び出すことができ、対象ユーザーの `talkagent` ドキュメントのスケジュールが即座に無効化されます。
 
 ## context.messaging.getLastResult(callback) メソッド
 このユーザーに関して実行された定期実行結果のうち、最後に検出されたエラーと、コンソール出力を取得します。
 callbackに指定したfunctionの第1引数には { error: 最後に検出されたエラーの内容, console: 最後に実行されたコンソール出力 } が、定期実行が未スケジュールの場合はnullが格納されます。第2引数には結果の取得に失敗した場合にエラーオブジェクトが格納されます。
-
