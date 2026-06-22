@@ -67,4 +67,3 @@ AI連携の使い方を、以下の動画で解説しています。
 - **Claude**: [カスタムコネクタ（リモートMCP）を追加する](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp) — claude.ai や Claude Desktop の設定から追加できます。
 - **ChatGPT**: [デベロッパーモードでMCPコネクタを追加する](https://help.openai.com/en/articles/12584461-developer-mode-apps-and-full-mcp-connectors-in-chatgpt-beta) — 設定でデベロッパーモードを有効にしてから追加します。
 - **Google（Gemini）**: 一般向けのGeminiアプリやGoogle AI Studioは、現状カスタムリモートMCPコネクタに対応していません。接続するにはAntigravityやGemini Enterpriseなどの開発者向けツールが必要です（[AIアプリケーションでMCPを設定する](https://docs.cloud.google.com/mcp/configure-mcp-ai-application)）。
-- [Model Context Protocol 公式サイト](https://modelcontextprotocol.io/)
