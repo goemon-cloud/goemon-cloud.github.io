@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: 基本操作
-nav_order: 6
+nav_order: 8
 title: "Personaryデータの分析"
 ---
 

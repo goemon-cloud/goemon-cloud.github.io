@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: 基本操作
-nav_order: 5
+nav_order: 7
 
 title: "Personaryの設定変更を行う"
 created: 2021-07-06T08:43:21Z
