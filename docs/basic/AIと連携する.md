@@ -62,7 +62,7 @@ AI連携の使い方を、以下の動画で解説しています。
 
 ## 関連リンク
 
-クライアントへのGO-E-MONの登録方法は、各クライアントの公式ドキュメントを参照してください（接続先URLには `https://goemon.cloud/mcp` を指定します）。
+クライアントへのGO-E-MONの登録方法は、各クライアントの公式ドキュメントを参照してください。
 
 - **Claude**: [カスタムコネクタ（リモートMCP）を追加する](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp) — claude.ai や Claude Desktop の設定から追加できます。
 - **ChatGPT**: [デベロッパーモードでMCPコネクタを追加する](https://help.openai.com/en/articles/12584461-developer-mode-apps-and-full-mcp-connectors-in-chatgpt-beta) — 設定でデベロッパーモードを有効にしてから追加します。
