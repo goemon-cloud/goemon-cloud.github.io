@@ -19,6 +19,12 @@ AI連携の使い方を、以下の動画で解説しています。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qfa0eK9q4eE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+## チャット経由でのタスク作成例
+
+ChatGPTへの指示だけでStroop課題を作り、エラーの修正、スマートフォン向けタップUIへの変更、実行ログの確認までを行う一連の流れを、以下の動画で紹介しています。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8C0y-J7WamQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## できること
 
 接続したAIから、次のような操作を行えます。
